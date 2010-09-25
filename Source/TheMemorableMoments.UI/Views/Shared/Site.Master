@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<%@ Import Namespace="TheMemorableMoments.UI.Web.Controls" %>
+<%@ Import Namespace="TheMemorableMoments.UI.Web.Helpers" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+         <asp:ContentPlaceHolder ID="mastertitle" runat="server" >- the memorable moments</asp:ContentPlaceHolder>
+    </title>
+
+    <%= Html.Css(new []{"/Content/css/controls/jquery-ui-1.8.1.custom.css",
+    "/Content/css/common.css"}, "/css/mastercss.css") %>
+
+    <%= Html.Js(new[] {"/Scripts/Frameworks/jquery.js",
+    "/Scripts/Controls/jquery.imgpreview.js",
+    "/Scripts/Controls/jquery.jnotifica.min.js",
+    "/Scripts/Controls/Dialog/jquery-ui-1.8.1.dialog.min.js",
+    "/Scripts/Frameworks/Microsoft/MicrosoftAjax.js",
+    "/Scripts/Frameworks/Microsoft/MicrosoftMvcValidation.js",
+    "/Scripts/Pages/common.js",
+    }, "/js/masterjs.js") %>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />    
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-191406-4");
+        pageTracker._trackPageview();
+    } catch (err) { }
+
+
+    $(document).ready(function () {
+
+        $('a#signin').click(function (e) {
+            e.preventDefault();
+            $('#dialog-form').dialog('open');
+        });
+
+        $("#dialog-form").dialog({
+            autoOpen: false,
+            height: 250,
+            width: 290,
+            modal: true,
+            buttons: {
+                'login': function () {
+                    $('form#loginform').submit();
+                }
+            }
+        });
+    });
+    </script>
+    
+</head>
+
+<body>
+    <div class="page">
+    <div class="siteheader" style="border-bottom:1px dashed #999;padding:5px;height:12px;" >
+        <div class="navigation" style="margin-left:auto;margin-right:auto;width:1001px;" >
+        <span style="text-transform:lowercase;" ><asp:ContentPlaceHolder ID="pageHeader" runat="server" >the memorable moments</asp:ContentPlaceHolder></span>
+    	    <ul class="navigation" >
+    	        <asp:ContentPlaceHolder ID="navigation" runat="server" >                
+                    <%= Html.NonSignedInMenu() %>  	        
+    	        </asp:ContentPlaceHolder>
+    	   </ul>
+           <div id="dialog-form" style="display:none;" title="Login">
+             <form id="loginform" action="/login" method="post">
+                    <p><label>Username</label><input id="Username" name="Username" style="width:250px;" maxlength="100" type="text" value="" /></p>
+                    <p><label>Password</label><input id="Password" name="Password" style="width:250px;" maxlength="150" type="password" /></p>                
+                    <p><input class="normalwidth" id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /> <label style="display:inline;"  for="rememberMe">Remember me?</label></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    	<div id="body">    	
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <div class="clearboth" ></div>
+        </div>
+    </div>
+    <div id="footer" >copyrighted &#169; 2010 by the memorable moments. photos are copyrighted by their respective copyright holders.</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database_Script.PreDeployment.sql
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database_Script.PostDeployment.sql
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database_Database.sqlsettings
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database_Database.sqldeployment
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database_Database.sqlcmdvars
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database.deploymanifest
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\sql\QA\TheMemorableMoments.Database.dbschema
+C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.Database\obj\QA\TheMemorableMoments.Database.dbschema

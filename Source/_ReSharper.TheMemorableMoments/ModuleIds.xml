@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="12BB4292-D205-45F7-98AA-A24FD11705F3" ModuleId="TheMemorableMoments" />
+  <Module PersistentId="867CF744-35A0-45FF-8751-8FC73D8B51C9" ModuleId="TheMemorableMoments.FileService" />
+  <Module PersistentId="8CE1FF56-F801-41DB-B7AA-B09B9C71C504" ModuleId="TheMemorableMoments.UI" />
+  <Module PersistentId="4B497886-58CE-4D57-BF5D-A49A59ACCF17" ModuleId="TheMemorableMoments.Uploader" />
+</Modules>

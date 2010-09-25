@@ -1,0 +1,16 @@
+﻿
+.red{color:red;font-weight:bold;}
+.green{color:green;font-weight:bold;}
+.orange{color:#E66F00;font-weight:bold;}
+.tagcolor {color:#777;}
+
+label.red, label.green, label.orange{font-weight:normal; text-transform:lowercase;}
+
+table.results img {max-width:90px;}
+table.results {color:#ccc;}
+table.results td + td + td + td {color:#666;}
+
+p {color:#aaa;}
+.displayinline {display:inline;}
+
+p.commentcomment{line-height:150%;color:#666;}

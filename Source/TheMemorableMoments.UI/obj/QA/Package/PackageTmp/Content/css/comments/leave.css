@@ -1,0 +1,21 @@
+﻿div.comment { background-color:#FFFFFF; margin-left:10px; width:370px; display:block; text-align:left; }
+
+div.comment h3 { color:#000; font-size:13px; font-weight:normal; margin-top:10px; }
+div.comment p { margin-bottom:15px; }
+div.comment p textarea { color:#666; font-size:1.1em; padding:5px; width:360px; }
+div.comment p input { color:#666; font-size:1.1em; padding:4px; width:360px; }
+div.comment p.submit input { color:#FFF; font-size:12px; width:auto; }
+
+
+div.commentimage {background-color:#FFF; float:left; text-align:center; width:410px; display:block; }
+div.commentimage img { background-color:#EEE; border:1px solid #BBB; margin-top:9px; padding:4px; width:370px; margin-top:2px;}
+div.commentimage p {font-size:11px;}
+div.commentimage form {margin-left:5px; margin-top:20px;}
+
+div.postedcomment { background-color:#FFFFFF; }
+div.postedcomment h3 { color:#999;font-size:13px; font-weight:normal;}
+
+div.editphoto { float:left; margin-top:40px; width:570px; display:block; margin-left:10px;}
+
+p.nocommentsmessage { font-size:12px; font-style:italic; margin-bottom:40px; margin-top:40px;}
+

@@ -1,0 +1,61 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<TheMemorableMoments.UI.Models.Views.Photos.ManagePhotosView>" %>
+<%@ Import Namespace="TheMemorableMoments.UI.Web"%>
+<%@ Import Namespace="TheMemorableMoments.UI.Web.Helpers" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+	manage photos - <%= Model.Authorization.Owner.DisplayName %>
+</asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="pageHeader" runat="server">
+	<%=Model.Authorization.Owner.DisplayName %>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="navigation" runat="server">
+	<%= UserNavigationHelper.GetUserNavigation(Model.Authorization)%>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+	<div id="userheader">
+			<%= UserNavigationHelper.GetBreadCrumbs(Model.BreadCrumbs)%>
+	</div>
+	
+	 <div class="nav"> 
+		<ul style="float:right;" >
+           <%= Model.RenderManageTabs() %>
+ 			<li><a href="/<%= Model.Authorization.Owner.Username %>/comments">Comments</a></li> 
+		</ul> 
+		<br class="clearboth" />
+	</div>    
+
+        <% Html.RenderPartial(Model.PartialView, Model); %>	
+     
+        <%= Html.Message(Model.UIMessage) %>
+
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="head" runat="server">
+	
+	<script language="javascript" type="text/javascript" src="/Scripts/Controls/jquery.autosearch.min.js"></script>
+	<script language="javascript" type="text/javascript" src="/Scripts/Controls/FancyBox/jquery.fancybox-1.3.1.js"></script>
+	<script language="javascript" type="text/javascript" src="/Scripts/Controls/Dialog/jquery-ui-1.8.1.dialog.min.js"></script>
+	<script language="javascript" type="text/javascript" src="/Scripts/Pages/common.js"></script>
+	<script language="javascript" type="text/javascript" src="/Scripts/Pages/Photos/index.js"></script>
+	
+	<script type="text/javascript">
+	   var username = "<%= Model.Authorization.Owner.Username %>";
+	   var maxHeight = <%= Model.Authorization.Owner.Settings.WebViewMaxHeight %>;
+	   var maxWidth = <%= Model.Authorization.Owner.Settings.WebViewMaxWidth %>;	  
+       var message = '<%= Model.UIMessage %>';  
+	</script>
+
+	<style type="text/css">
+		@import url("/Content/css/photos/index.css");
+		@import url("/Content/css/controls/jquery.autosearch.css");  
+		@import url("/Content/css/controls/jquery.fancybox-1.3.1.css"); 
+		@import url("/Content/css/controls/jquery-ui-1.8.1.custom.css");
+	</style>
+
+	<style media="all" type="text/css">
+		img{ max-height:<%= Model.Authorization.Owner.Settings.WebViewMaxHeight %>px; max-width:<%= Model.Authorization.Owner.Settings.WebViewMaxWidth %>px;}
+	</style>
+</asp:Content>
