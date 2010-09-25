@@ -9,68 +9,14 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/f:UserNavigationHelper.cs" caret="2836" fromTop="17" />
       <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaRepository.cs" caret="9927" fromTop="25" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Models/f:PaginationModel.cs" caret="1815" fromTop="27" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:CommentsController.cs" caret="1681" fromTop="20" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:user/f:index.js" caret="1278" fromTop="33" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Widgets/f:RecentUploadsWidget.cs" caret="4468" fromTop="37" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Comments/f:Leave.aspx" caret="4443" fromTop="19" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:comments/f:leave.js" caret="41" fromTop="2" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:comments/f:leave.css" caret="293" fromTop="4" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Comments/f:Index.aspx" caret="2517" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:comments/f:index.js" caret="0" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:comments/f:index.css" caret="446" fromTop="14" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Edit.aspx" caret="2919" fromTop="18" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:edit.js" caret="288" fromTop="8" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:show.js" caret="340" fromTop="13" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Edit/f:EditView.js" caret="5212" fromTop="25" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/f:EditPhotoHelper.cs" caret="0" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/f:PagingHelper.cs" caret="0" fromTop="0" />
       <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Model/d:MediaClasses/f:Media.cs" caret="273" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Models/d:Views/f:PhotoHtmlHelper.cs" caret="6394" fromTop="16" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Models/d:Views/d:Photos/f:PhotoView.cs" caret="0" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:PhotosController.cs" caret="17898" fromTop="19" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Show.aspx" caret="3214" fromTop="30" />
       <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_7.user.sql" caret="0" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4971" fromTop="18" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/f:RegisterController.cs" caret="4308" fromTop="19" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Upload/f:AddDetails.aspx" caret="1255" fromTop="26" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:MediaUploaderService.cs" caret="858" fromTop="21" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:TheUploader.cs" caret="1463" fromTop="17" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:AlbumsController.cs" caret="20449" fromTop="28" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Edit/f:EditView.js" caret="2097" fromTop="37" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Edit/f:EditView.js" caret="6994" fromTop="15" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Edit.aspx" caret="3467" fromTop="13" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Edit.aspx" caret="2919" fromTop="18" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Show.aspx" caret="2139" fromTop="26" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Edit/f:EditView.js" caret="5002" fromTop="23" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:edit.js" caret="288" fromTop="8" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:show.js" caret="844" fromTop="28" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:show.js" caret="631" fromTop="20" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="3038" fromTop="10" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="6485" fromTop="27" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="6485" fromTop="34" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5624" fromTop="7" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Show.aspx" caret="3214" fromTop="24" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5987" fromTop="19" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="6416" fromTop="32" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="6275" fromTop="31" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4378" fromTop="20" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4623" fromTop="25" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4109" fromTop="24" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="3795" fromTop="16" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5215" fromTop="29" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4946" fromTop="24" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5319" fromTop="34" />
       <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_7.user.sql" caret="0" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Upload/f:AddDetails.aspx" caret="1730" fromTop="24" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/f:RegisterController.cs" caret="4665" fromTop="29" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:AlbumsController.cs" caret="6790" fromTop="16" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:AlbumsController.cs" caret="19264" fromTop="21" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:AlbumsController.cs" caret="20708" fromTop="36" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

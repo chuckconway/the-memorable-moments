@@ -7,7 +7,7 @@ using TheMemorableMoments.Domain.Services;
 
 namespace TheMemorableMoments.Uploader
 {
-    public class PhotoSizer
+    public class PhotoSizer 
     {
         private readonly UploaderMedia _uploaderMedia;
         private readonly IResizerService _resizerService = DependencyInjection.Resolve<IResizerService>();
