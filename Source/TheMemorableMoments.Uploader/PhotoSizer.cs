@@ -61,7 +61,7 @@ namespace TheMemorableMoments.Uploader
 
             if(media == null)
             {
-                throw  new ArgumentNullException("media", "Media is null expected value.");
+                throw  new Exception("Media is null expected value.");
             }
             MediaFile mediaFile = media.GetImageByPhotoType(PhotoType.Original);
             List<MediaFile> mediaFiles = _mediaFileService.CreateMediaFiles(mediaFile.OriginalFileName);
