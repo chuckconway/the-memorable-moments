@@ -14,9 +14,12 @@
       <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_7.user.sql" caret="0" fromTop="0" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:MediaUploaderService.cs" caret="858" fromTop="21" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:TheUploader.cs" caret="1463" fromTop="17" />
+      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="1011" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
       <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_7.user.sql" caret="0" fromTop="0" />
+      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="294" fromTop="8" />
+      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="2622" fromTop="20" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
