@@ -1,8 +1,0 @@
-﻿table.results td p { border-bottom:1px dotted #ddd;color:#999;font-size:11px;margin-bottom:0;margin-left:10px;margin-top:5px;}
-table.results td span.albumname {color:#666;}
-table.results td a.friendlink:hover {background-color:#fff;}
-table.results td p span {float:right; color:#999;}
-table.results td:first-child + td {width:600px;}
-
-table.results tr th {border:none;}
-table.results tr td {border:none;}
