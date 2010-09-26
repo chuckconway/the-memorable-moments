@@ -58,7 +58,7 @@ namespace TheMemorableMoments.UI.Widgets
                             (index % 3 == 0 ? "style=\"margin-right:0px;\"" : string.Empty), 
                             media[index].MediaId,
                             TruncateText(media[index].Title, 20),
-                            TruncateText(media[index].Description, 50),
+                            TruncateText(media[index].Description, 35),
                             media[index].CommentCount,
                             urlService.UserRoot(),
                             showUrl));
