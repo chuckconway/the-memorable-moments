@@ -56,20 +56,19 @@ window.application.addView((function ($, application) {
 
     // I am the contact list view class.
     function ShowView() {
+        this.container = null;
     }
 
     ShowView.prototype.init = function () {
-
+        this.container = $('div#imagecontainer');
     };
 
     ShowView.prototype.setNavigation = function (prevId, nextId, currentPosition, totalCount) {
         //Set positionCount
         var positionText = currentPosition + ' of ' + totalCount;
         $('span#position').text(positionText);
-
         $('a#prev').attr('href', '#/photo/' + prevId);
         $('a#next').attr('href', '#/photo/' + nextId);
-
         $('p#photonavigation').fadeIn(400);
     };
 
@@ -122,6 +121,7 @@ window.application.addView((function ($, application) {
             'overlayColor': '#000',
             onClosed: function () {
 
+                self.container.hide();
                 var image = $('img#image');
                 var url = image.attr('src').split('?')[0];
 
@@ -129,7 +129,7 @@ window.application.addView((function ($, application) {
 
                     for (var index = 0; index < imageChanged.length; index++) {
 
-                        if (parent.imageChanged[index] == url) {
+                        if (imageChanged[index] == url) {
 
                             var timestamp = new Date().getTime() + Math.random();
                             url += '?' + timestamp;
@@ -139,9 +139,11 @@ window.application.addView((function ($, application) {
                 }
 
                 var model = application.getModel("ShowModel");
-                var id = $('div#imagecontainer').attr('name');
+                var id = self.container.attr('name');
 
                 model.getMediaDetails(id, username, function (data) {
+
+                    self.resetImageContainer(data.Width);
                     self.setTitleDescription(data.Title, data.Description);
                     self.setDetails(id, data.details);
                     self.setTitle(data.Title, data.DisplayName);
@@ -151,17 +153,28 @@ window.application.addView((function ($, application) {
         });
     };
 
-    ShowView.prototype.setImageSrc = function (imagesrc) {
+    ShowView.prototype.resetImageContainer = function (width) {
+
+        var self = this;
+        var imageWidth = (width + 23);
+
+        var image = $('img#image');
+        image.load(function () {
+            self.container.width(imageWidth);
+            self.container.fadeIn(200);
+        });
+    };
+
+    ShowView.prototype.setImageSrc = function (imagesrc, width, height) {
+
+        var self = this;
+        var imageWidth = (width + 23);
+
         var image = $('img#image');
         image.attr('src', imagesrc);
         image.load(function () {
-            var container = $('div#imagecontainer');
-            container.fadeIn(200);
-            var resizer = new Resizer();
-            resizer.resize(this.width, this.height, maxWidth, maxHeight);
-            var image = $(this);
-            var imageWidth = (resizer.width + 23);            
-            container.width(imageWidth);
+            self.container.fadeIn(200);
+            self.container.width(imageWidth);
         });
 
         image.attr('src', imagesrc);
@@ -182,27 +195,23 @@ window.application.addView((function ($, application) {
 
         this.setSizes(id, username);
         this.navigation(id, keys);
-
-        $('div#imagecontainer').attr('name', id);
+        self.container.attr('name', id);
 
         model.getMediaDetails(id, username, function (data) {
             self.setTitleDescription(data.Title, data.Description);
             self.setDetails(id, data.details);
-            self.setImageSrc(data.imageSrc);
+            self.setImageSrc(data.imageSrc, data.Width, data.Height);
             self.setTitle(data.Title, data.DisplayName);
         });
     };
 
     ShowView.prototype.showView = function (parameters) {
-        var container = $('div#imagecontainer');
-        container.hide();
+        this.container.hide();
         this.populate(parameters.id, username);
-
     };
 
     ShowView.prototype.hideView = function (event) {
-        var container = $('div#imagecontainer');
-        container.fadeOut(400);
+        this.container.fadeOut(400);
     };
 
     return (new ShowView());

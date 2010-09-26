@@ -51,32 +51,51 @@ function sizeImageContainer(element) {
 
 function Resizer(){
 
-    this.resize = function (curentWidth, currentHeight, maxWidth, maxHeight) {
+    this.resize = function (currentWidth, currentHeight, maxWidth, maxHeight) {
 
+        maxWidth = parseInt(maxWidth);
+        maxHeight = parseInt(maxHeight);
         var newWidth;
         var newHeight;
 
-        if (curentWidth > maxWidth || currentHeight > maxHeight) {
+        if (currentWidth > maxWidth || currentHeight > maxHeight) {
 
-            if (curentWidth > maxWidth && curentWidth > currentHeight) {
 
-                var ratio = maxWidth / curentWidth;
-                newWidth = curentWidth * ratio;
+        //Landscape
+            if (currentWidth > currentHeight) {
+
+                var ratio = maxWidth / currentWidth;
+                newWidth = currentWidth * ratio;
                 newHeight = currentHeight * ratio;
-
-            } else {
+                
+            }
+            //portrait
+            else {
 
                 var ratio = maxHeight / currentHeight;
                 newHeight = currentHeight * ratio;
-                newWidth = curentWidth * ratio;
+                newWidth = currentWidth * ratio;
             }
+
+//            if (curentWidth > maxWidth && curentWidth > currentHeight) {
+
+//                var ratio = maxWidth / curentWidth;
+//                newWidth = curentWidth * ratio;
+//                newHeight = currentHeight * ratio;
+
+//            } else {
+
+//                var ratio = maxHeight / currentHeight;
+//                newHeight = currentHeight * ratio;
+//                newWidth = curentWidth * ratio;
+//            }
 
             this.width = newWidth;
             this.height = newHeight;
 
         } else {
 
-            this.width = curentWidth;
+            this.width = currentWidth;
             this.height = currentHeight;
         }
     };

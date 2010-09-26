@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Data;
-using TheMemorableMoments.Domain.Model;
 using TheMemorableMoments.Domain.Model.MediaClasses;
 
 namespace TheMemorableMoments
@@ -52,5 +51,13 @@ namespace TheMemorableMoments
         /// </summary>
         /// <param name="mediaFiles">The media files.</param>
         void Save(List<MediaFile> mediaFiles);
+
+        /// <summary>
+        /// Updates the dimensions.
+        /// </summary>
+        /// <param name="fileId">The file id.</param>
+        /// <param name="width">The width.</param>
+        /// <param name="height">The height.</param>
+        void UpdateDimension(int fileId, int width, int height);
     }
 }

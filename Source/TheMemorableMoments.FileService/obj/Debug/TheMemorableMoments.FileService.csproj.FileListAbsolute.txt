@@ -7,3 +7,12 @@ C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.FileSe
 C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.FileService\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.FileService\obj\Debug\TheMemorableMoments.FileService.dll
 C:\Projects\TheMemorableMoments\Branches\2.1.0\Source\TheMemorableMoments.FileService\obj\Debug\TheMemorableMoments.FileService.pdb
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\bin\Debug\TheMemorableMoments.FileService.dll
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\bin\Debug\TheMemorableMoments.FileService.pdb
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\bin\Debug\Chucksoft.Core.dll
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\bin\Debug\Chucksoft.Core.pdb
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\obj\Debug\TheMemorableMoments.FileService.dll
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.FileService\obj\Debug\TheMemorableMoments.FileService.pdb

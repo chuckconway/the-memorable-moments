@@ -10,14 +10,18 @@ namespace TheMemorableMoments.Domain.Services
     public class ImageService : IImageService
     {
         private readonly IFileService _fileService;
+        private IMediaFileRepository _mediaFileRepository;
+
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ImageService"/> class.
         /// </summary>
         /// <param name="fileService">The file service.</param>
-        public ImageService(IFileService fileService)
+        /// <param name="mediaFileRepository">The media file repository.</param>
+        public ImageService(IFileService fileService, IMediaFileRepository mediaFileRepository)
         {
             _fileService = fileService;
+            _mediaFileRepository = mediaFileRepository;
         }
 
         /// <summary>
@@ -34,6 +38,7 @@ namespace TheMemorableMoments.Domain.Services
                 bytes = rotate(bytes);
                 string contentType = GetContentType(file);
                 _fileService.AddFile(user.Username, file.FilePath, contentType, bytes);
+                _mediaFileRepository.UpdateDimension(file.FileId, file.Height, file.Width);
             }
         }
 

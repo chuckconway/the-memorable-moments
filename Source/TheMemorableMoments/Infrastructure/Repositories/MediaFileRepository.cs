@@ -55,7 +55,17 @@ namespace TheMemorableMoments.Infrastructure.Repositories
             return Convert.ToInt32(outParameter.Value);
         }
 
-
+        /// <summary>
+        /// Updates the dimensions.
+        /// </summary>
+        /// <param name="fileId">The file id.</param>
+        /// <param name="width">The width.</param>
+        /// <param name="height">The height.</param>
+        public void UpdateDimension(int fileId, int width, int height)
+        {
+            database.NonQuery("File_UpdateDimension", new { fileId, width, height });
+        }
+        
         /// <summary>
         /// Updates the File table by the primary key, if the File is dirty then an update will occur
         /// </summary>

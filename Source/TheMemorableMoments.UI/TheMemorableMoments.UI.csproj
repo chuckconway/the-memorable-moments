@@ -304,6 +304,7 @@
     <Compile Include="Web\Recent\RecentActivityService.cs" />
     <Compile Include="Web\Recent\TagsAddedActivity.cs" />
     <Compile Include="Web\Services\PopulateSidebarView.cs" />
+    <Compile Include="Web\Services\Resizer.cs" />
     <Compile Include="Web\Services\TagService.cs" />
     <Compile Include="Web\Services\UserAuthorization.cs" />
     <Compile Include="Web\SiteCookie.cs" />

@@ -383,7 +383,11 @@ namespace TheMemorableMoments.UI.Controllers.User
             MediaFile file = media.GetImageByPhotoType(PhotoType.Websize);
             string imageSrc = UrlService.CreateImageUrl(file.FilePath);
             string details = GetDetailSection(media, Authorization.IsOwner);
-            return Json(new { imageSrc, media.Title, media.Description, details, Authorization.Owner.DisplayName}, "application/json");
+
+            Resizer resizer = new Resizer();
+            resizer.Resize(file.Width, file.Height, Authorization.Owner.Settings.WebViewMaxWidth, Authorization.Owner.Settings.WebViewMaxHeight);
+
+            return Json(new { imageSrc, media.Title, media.Description, details, Authorization.Owner.DisplayName, resizer.Width, resizer.Height }, "application/json");
         }
 
         /// <summary>
