@@ -9,18 +9,68 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaRepository.cs" caret="9927" fromTop="25" />
-      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Model/d:MediaClasses/f:Media.cs" caret="273" fromTop="0" />
-      <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_7.user.sql" caret="0" fromTop="0" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:MediaUploaderService.cs" caret="858" fromTop="21" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:TheUploader.cs" caret="1463" fromTop="17" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="1011" fromTop="18" />
       <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:app.config" caret="0" fromTop="0" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/f:TheMemorableMomentsContainerBuilder.cs" caret="2691" fromTop="33" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:UserUrlService.cs" caret="2285" fromTop="39" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Models/d:Show/f:ShowModel.js" caret="595" fromTop="21" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Controllers/f:show.js" caret="582" fromTop="0" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Show.aspx" caret="2105" fromTop="36" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="533" fromTop="17" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:show.js" caret="2179" fromTop="63" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:ImageService.cs" caret="1648" fromTop="30" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaFileRepository.cs" caret="2575" fromTop="31" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/f:IMediaFileRepository.cs" caret="1914" fromTop="59" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Edit/f:EditView.js" caret="0" fromTop="0" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="3012" fromTop="3" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:ManagePhotos/d:Views/f:ManagePhotoBase.cs" caret="4776" fromTop="28" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:ManagePhotos/d:Views/f:GetManagePhotoView.cs" caret="1741" fromTop="27" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:ManagePhotos/f:ManagePhotoFactory.cs" caret="1659" fromTop="31" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Shared/f:Site.Master" caret="727" fromTop="14" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Index.aspx" caret="1190" fromTop="19" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Search/f:Index.aspx" caret="1398" fromTop="22" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:controls/f:jquery-ui-1.8.1.custom.css" caret="16296" fromTop="14" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/f:common.css" caret="17776" fromTop="0" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:SearchView.ascx" caret="1478" fromTop="21" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:ManagedPhotoView.ascx" caret="2048" fromTop="27" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Models/d:Views/d:Photos/f:ManagePhotosView.cs" caret="4625" fromTop="33" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:PhotosController.cs" caret="2933" fromTop="18" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Controllers/f:PhotoViewBaseController.cs" caret="2170" fromTop="27" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:edit.js" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_7.user.sql" caret="0" fromTop="0" />
-      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="294" fromTop="8" />
-      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="2622" fromTop="20" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="1300" fromTop="29" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="0" fromTop="0" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:PhotosController.cs" caret="15305" fromTop="34" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5332" fromTop="25" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="226" fromTop="7" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="892" fromTop="24" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="1115" fromTop="31" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:PhotosController.cs" caret="16096" fromTop="27" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaFileRepository.cs" caret="2266" fromTop="35" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaFileRepository.cs" caret="2630" fromTop="36" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/f:IMediaFileRepository.cs" caret="1704" fromTop="36" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/f:IMediaFileRepository.cs" caret="53" fromTop="0" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:ImageService.cs" caret="430" fromTop="11" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:ImageService.cs" caret="726" fromTop="19" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:ImageService.cs" caret="1648" fromTop="30" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaFileRepository.cs" caret="2575" fromTop="31" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/f:IMediaFileRepository.cs" caret="1914" fromTop="32" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4106" fromTop="27" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5082" fromTop="23" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4972" fromTop="24" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="4648" fromTop="26" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5204" fromTop="38" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="3812" fromTop="26" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:ManagedPhotoView.ascx" caret="2048" fromTop="27" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/f:common.css" caret="16819" fromTop="22" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/f:common.css" caret="7149" fromTop="17" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/f:common.css" caret="7344" fromTop="28" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/f:common.css" caret="17776" fromTop="21" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:controls/f:jquery-ui-1.8.1.custom.css" caret="16372" fromTop="20" />
+      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:controls/f:jquery-ui-1.8.1.custom.css" caret="16628" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -42,7 +92,7 @@
       <Item value="System" priority="8" />
       <Item value="ArgumentNullException`0" priority="2" />
       <Item value="string" priority="335" />
-      <Item value="new" priority="142" />
+      <Item value="new" priority="144" />
       <Item value="StringBuilder" priority="2" />
       <Item value="return" priority="91" />
       <Item value="Threading" priority="0" />
@@ -55,7 +105,7 @@
       <Item value="Exception`0" priority="0" />
       <Item value="media" priority="83" />
       <Item value="referer" priority="0" />
-      <Item value="else" priority="9" />
+      <Item value="else" priority="10" />
       <Item value="object" priority="13" />
       <Item value="null" priority="17" />
       <Item value="o" priority="14" />
@@ -73,17 +123,17 @@
       <Item value="tagId" priority="0" />
       <Item value="batchId" priority="10" />
       <Item value="letter" priority="0" />
-      <Item value="private" priority="13" />
+      <Item value="private" priority="14" />
       <Item value="TagCollection`0" priority="4" />
       <Item value="_tagCollection" priority="2" />
       <Item value="Paging" priority="0" />
       <Item value="TagCollection" priority="5" />
       <Item value="database" priority="19" />
       <Item value="tags" priority="7" />
-      <Item value="void" priority="18" />
+      <Item value="void" priority="20" />
       <Item value="assembly" priority="0" />
       <Item value="Alias" priority="5" />
-      <Item value="public" priority="145" />
+      <Item value="public" priority="149" />
       <Item value="IPagedList`0" priority="4" />
       <Item value="_userRepository" priority="0" />
       <Item value="Chucksoft" priority="5" />
@@ -109,7 +159,7 @@
       <Item value="files" priority="0" />
       <Item value="mediaFiles" priority="2" />
       <Item value="foreach" priority="18" />
-      <Item value="file" priority="10" />
+      <Item value="file" priority="16" />
       <Item value="List&lt;MediaFile&gt;" priority="1" />
       <Item value="me" priority="0" />
       <Item value="populateMedia" priority="0" />
@@ -120,9 +170,9 @@
       <Item value="html" priority="5" />
       <Item value="builder" priority="8" />
       <Item value="enum" priority="0" />
-      <Item value="prop" priority="59" />
+      <Item value="prop" priority="60" />
       <Item value="PhotoAge`0" priority="2" />
-      <Item value="int" priority="77" />
+      <Item value="int" priority="86" />
       <Item value="topPhotos" priority="0" />
       <Item value="RecentUploads`0" priority="3" />
       <Item value="List&lt;RecentUploads&gt;" priority="0" />
@@ -153,7 +203,7 @@
       <Item value="_mediaRepository" priority="8" />
       <Item value="mediaRepository" priority="3" />
       <Item value="IMediaFileRepository`0" priority="1" />
-      <Item value="_mediaFileRepository" priority="2" />
+      <Item value="_mediaFileRepository" priority="3" />
       <Item value="_hydrationService" priority="3" />
       <Item value="IMediaFiles`0" priority="2" />
       <Item value="album" priority="29" />
@@ -227,7 +277,7 @@
       <Item value="Value" priority="1" />
       <Item value="IEnumerable" priority="1" />
       <Item value="var" priority="1" />
-      <Item value="decimal" priority="4" />
+      <Item value="decimal" priority="7" />
       <Item value="Exif`0" priority="0" />
       <Item value="IgnoreParameter" priority="1" />
       <Item value="Bitmap" priority="0" />
@@ -491,7 +541,7 @@
       <Item value="IsOwner" priority="2" />
       <Item value="IsSignedIn" priority="2" />
       <Item value="Authorization`0" priority="8" />
-      <Item value="Authorization" priority="36" />
+      <Item value="Authorization" priority="37" />
       <Item value="isSignedIn" priority="0" />
       <Item value="isOwner" priority="0" />
       <Item value="SignedInUser" priority="2" />
@@ -603,6 +653,12 @@
       <Item value="Path" priority="0" />
       <Item value="PersistentCollection" priority="0" />
       <Item value="Cookie" priority="0" />
+      <Item value="Resizer`0" priority="0" />
+      <Item value="resizer" priority="1" />
+      <Item value="Resizer" priority="0" />
+      <Item value="fileId" priority="0" />
+      <Item value="width" priority="0" />
+      <Item value="height" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Text.StringBuilder">
       <Item value="ToString`0" priority="2" />
@@ -729,6 +785,7 @@
     <ItemStatistics item="Qualified:TheMemorableMoments.IMediaFileRepository">
       <Item value="RetrieveByMediaIds`0" priority="1" />
       <Item value="Save`0" priority="0" />
+      <Item value="UpdateDimensions`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
       <Item value="Count" priority="0" />
@@ -762,7 +819,7 @@
     <ItemStatistics item="Qualified:TheMemorableMoments.Domain.Model.User">
       <Item value="Id" priority="17" />
       <Item value="Username" priority="25" />
-      <Item value="Settings" priority="0" />
+      <Item value="Settings" priority="1" />
       <Item value="DisplayName" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:TheMemorableMoments.UI.Models.Views.Recent.RecentIndex">
@@ -1223,9 +1280,10 @@
       <Item value="Size" priority="2" />
       <Item value="OriginalFileName" priority="0" />
       <Item value="MediaId" priority="0" />
-      <Item value="Width" priority="2" />
-      <Item value="Height" priority="1" />
+      <Item value="Width" priority="5" />
+      <Item value="Height" priority="4" />
       <Item value="PhotoType" priority="0" />
+      <Item value="FileId" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:TheMemorableMoments.UI.Models.Views.AlbumModels.ManagePhotosView">
       <Item value="Album" priority="1" />
@@ -1398,7 +1456,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:TheMemorableMoments.UI.Web.Services.Authorization">
       <Item value="IsOwner" priority="8" />
-      <Item value="Owner" priority="34" />
+      <Item value="Owner" priority="35" />
       <Item value="IsSignedIn" priority="0" />
       <Item value="SignedInUser" priority="0" />
     </ItemStatistics>
@@ -1548,6 +1606,13 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:TheMemorableMoments.UI.Models.Views.Comments.CommentAction">
       <Item value="CommentId" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TheMemorableMoments.UI.Web.Services.Resizer">
+      <Item value="Resize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TheMemorableMoments.Domain.Model.UserSettings">
+      <Item value="WebViewMaxWidth" priority="0" />
+      <Item value="WebViewMaxHeight" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

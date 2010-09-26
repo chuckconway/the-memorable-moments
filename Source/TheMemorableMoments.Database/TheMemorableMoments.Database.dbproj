@@ -1253,5 +1253,13 @@
     <Build Include="Schema Objects\Database Level Objects\Security\Users\photogallery_7.user.sql">
       <SubType>Code</SubType>
     </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\File_UpdateDimension.proc.sql">
+      <SubType>Code</SubType>
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\photogallery_8.user.sql">
+      <SubType>Code</SubType>
+    </Build>
   </ItemGroup>
 </Project>
