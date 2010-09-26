@@ -36,7 +36,6 @@
         var username = '<%= Model.Authorization.Owner.Username %>';
         var maxWidth = '<%= Model.Authorization.Owner.Settings.WebViewMaxHeight %>';
         var maxHeight = '<%= Model.Authorization.Owner.Settings.WebViewMaxWidth %>';
-
         var imageChanged = [];
     </script>
 

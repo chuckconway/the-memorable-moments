@@ -9,18 +9,11 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:MediaUploaderService.cs" caret="858" fromTop="21" />
-      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:TheUploader.cs" caret="1463" fromTop="17" />
-      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="1011" fromTop="18" />
-      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:app.config" caret="0" fromTop="0" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/f:TheMemorableMomentsContainerBuilder.cs" caret="2691" fromTop="33" />
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:UserUrlService.cs" caret="2285" fromTop="39" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Models/d:Show/f:ShowModel.js" caret="595" fromTop="21" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Controllers/f:show.js" caret="582" fromTop="0" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Views/d:Photos/f:Show.aspx" caret="2105" fromTop="36" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="533" fromTop="17" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:show.js" caret="2179" fromTop="63" />
-      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:ImageService.cs" caret="1648" fromTop="30" />
       <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Infrastructure/d:Repositories/f:MediaFileRepository.cs" caret="2575" fromTop="31" />
       <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/f:IMediaFileRepository.cs" caret="1914" fromTop="59" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Edit/f:EditView.js" caret="0" fromTop="0" />
@@ -39,9 +32,15 @@
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:PhotosController.cs" caret="2933" fromTop="18" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Controllers/f:PhotoViewBaseController.cs" caret="2170" fromTop="27" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Pages/d:photos/f:edit.js" caret="0" fromTop="0" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:MediaFileService.cs" caret="2419" fromTop="60" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:MediaFilenameService.cs" caret="465" fromTop="13" />
+      <File id="4B497886-58CE-4D57-BF5D-A49A59ACCF17/f:PhotoSizer.cs" caret="2822" fromTop="32" />
+      <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_8.user.sql" caret="0" fromTop="0" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:MediaBatchService.cs" caret="2836" fromTop="61" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:ImageService.cs" caret="0" fromTop="0" />
+      <File id="12BB4292-D205-45F7-98AA-A24FD11705F3/d:Domain/d:Services/f:QueueFileService.cs" caret="4989" fromTop="8" />
     </RecentFiles>
     <RecentEdits>
-      <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="1300" fromTop="29" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Web/d:Services/f:Resizer.cs" caret="0" fromTop="0" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Controllers/d:User/f:PhotosController.cs" caret="15305" fromTop="34" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Scripts/d:Mvc/d:Views/d:Show/f:ShowView.js" caret="5332" fromTop="25" />
@@ -71,6 +70,7 @@
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/f:common.css" caret="17776" fromTop="21" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:controls/f:jquery-ui-1.8.1.custom.css" caret="16372" fromTop="20" />
       <File id="8CE1FF56-F801-41DB-B7AA-B09B9C71C504/d:Content/d:css/d:controls/f:jquery-ui-1.8.1.custom.css" caret="16628" fromTop="25" />
+      <File id="7D301B67-3224-4937-8EBC-DDA8019E1C06/d:Schema Objects/d:Database Level Objects/d:Security/d:Users/f:photogallery_8.user.sql" caret="0" fromTop="0" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

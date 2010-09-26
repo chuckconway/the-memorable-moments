@@ -32,7 +32,7 @@
    </div>
 
     <div style="clear:both;" ></div>
-    <p style="text-align:right;font-size:13px;border-top:1px dotted #ccc;padding-top:10px;padding-right:10px;" ><a class="buttonstyle" href="/<%=Model.Authorization.Owner.Username %>/upload" title="upload more photos">Upload more photos</a>  <a class="buttonstyle" href="/<%= Model.Authorization.Owner.Username %>" title="return to the homepage">Return to homepage</a></p>
+    <p style="text-align:right;font-size:13px;border-top:1px dotted #ccc;padding-top:10px;padding-right:10px;" ><a class="buttonstyle" href="/<%=Model.Authorization.Owner.Username %>/upload" title="upload more photos">Upload more photos</a>  <a class="buttonstyle" href="/<%= Model.Authorization.Owner.Username %>" title="Go to the homepage">Go to homepage</a></p>
     
 </asp:Content>
 

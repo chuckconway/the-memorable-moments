@@ -28,5 +28,7 @@
 			.Columns(c => c.For(p => Model.RenderDetails(p)).DoNotEncode().Named(string.Empty)) 
 			.Columns(c => c.For(p => Model.RenderEditLinks(p)).Attributes(@class => "edit").DoNotEncode().Named(string.Empty))
 		%>
+
+       <p><%= Model.Pagination.RenderedPagination %></p>
    <%
 	 }%>

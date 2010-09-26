@@ -88,7 +88,14 @@ namespace TheMemorableMoments.Domain.Services
                         date = GetDate(id, value, date);
                     }
 
-                    _mediaQueueRepository.SaveExif(table);
+                    try
+                    {
+                        _mediaQueueRepository.SaveExif(table);
+                    }
+                    catch //This needs to be logged... TODO:Log this! Maybe we can tap into ELMAH
+                    {
+                        
+                    }
                 }
             }
 
@@ -106,8 +113,15 @@ namespace TheMemorableMoments.Domain.Services
         {
             if (id == "9003" && !string.IsNullOrEmpty(value))
             {
-                DateTime? taken = DateTaken(value);
-                date = (taken.HasValue ? taken.GetValueOrDefault() : DateTime.MinValue);
+                try
+                {
+                    DateTime? taken = DateTaken(value);
+                    date = (taken.HasValue ? taken.GetValueOrDefault() : DateTime.MinValue);
+                }
+                catch // can not fixed f'ed up dates
+                {
+
+                }
             }
             return date;
         }
