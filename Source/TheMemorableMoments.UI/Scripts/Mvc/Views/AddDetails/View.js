@@ -28,7 +28,7 @@
         model.getDetails(id, username, function (data) {
 
             if (data.length < parseInt(self.photoCount)) {
-                timer = setTimeout(self.populate(id, username), 10000);
+                timer = setTimeout("self.populate($('input#BatchId').val(), username)", 10000);
             }
             else {
 

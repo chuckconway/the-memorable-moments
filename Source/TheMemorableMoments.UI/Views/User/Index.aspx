@@ -31,7 +31,6 @@
                         "/Scripts/Controls/jTagCloud.js",
                         "/Scripts/controls/FancyBox/jquery.fancybox-1.3.1.js",
                         "/Scripts/controls/jquery.timeago.js",
-                        "/Scripts/Frameworks/grayscale.js",
                         "/Scripts/pages/user/index.js",},
                         "/js/userhome_2.1.0.370.js")%>
 </asp:Content>

@@ -28,3 +28,4 @@ syntax: glob
 *.scc
 *.sig
 _ReSharper*\*
+glob:Source/TheMemorableMoments.UI/TheMemorableMoments.UI.Publish.xml
