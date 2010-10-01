@@ -29,3 +29,4 @@ syntax: glob
 *.sig
 _ReSharper*\*
 glob:Source/TheMemorableMoments.UI/TheMemorableMoments.UI.Publish.xml
+glob:Source/TheMemorableMoments.UI/App_Data/Error.db
