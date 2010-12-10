@@ -22,8 +22,7 @@ namespace TheMemorableMoments.Infrastructure.Repositories
 		{
 			_hydrationService = hydrationService;
 		}
-
-
+        
 		/// <summary>
 		/// Saves the specified user.
 		/// </summary>

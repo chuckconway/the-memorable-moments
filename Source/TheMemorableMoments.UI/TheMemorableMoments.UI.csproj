@@ -623,9 +623,9 @@
     <Folder Include="Scripts\Pages\share\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments.FileService\TheMemorableMoments.FileService.csproj">
+    <ProjectReference Include="..\TheMemorableMoments.FileService\Chucksoft.Storage.csproj">
       <Project>{867CF744-35A0-45FF-8751-8FC73D8B51C9}</Project>
-      <Name>TheMemorableMoments.FileService</Name>
+      <Name>Chucksoft.Storage</Name>
     </ProjectReference>
     <ProjectReference Include="..\TheMemorableMoments\TheMemorableMoments.csproj">
       <Project>{12BB4292-D205-45F7-98AA-A24FD11705F3}</Project>

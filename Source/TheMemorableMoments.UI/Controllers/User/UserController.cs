@@ -68,7 +68,7 @@ namespace TheMemorableMoments.UI.Controllers.User
 
             return View(view, crumbs);
         }
-        
+
         /// <summary>
         /// Indexes the specified username.
         /// </summary>
@@ -96,12 +96,21 @@ namespace TheMemorableMoments.UI.Controllers.User
         {
             List<Media> mediae = _mediaRepository.Retrieve25RecentPhotosByUserId(Owner.Id);
             RssService service = new RssService();
-// ReSharper disable PossibleNullReferenceException
-            string fullPath = "http://" + Request.Url.Host + "/";
-// ReSharper restore PossibleNullReferenceException
-            string feed = service.Render(mediae, Owner, fullPath);
 
+            string url = GetUrl();
+
+            string fullPath = string.Format("http://{0}/", url);
+            string feed = service.Render(mediae, Owner, fullPath);
             return Content(feed, "text/xml");
+        }
+
+        /// <summary>
+        /// Gets the URL.
+        /// </summary>
+        /// <returns></returns>
+        private string GetUrl()
+        {
+            return (Request.Url != null ? Request.Url.Host : string.Empty);
         }
 
         /// <summary>
@@ -112,15 +121,16 @@ namespace TheMemorableMoments.UI.Controllers.User
         {
             List<Media> mediae = _mediaRepository.Retrieve25RecentPhotosByUserId(Owner.Id);
             AtomService service = new AtomService();
-// ReSharper disable PossibleNullReferenceException
-            string fullPath = string.Format("http://{0}/", Request.Url.Host);
-// ReSharper restore PossibleNullReferenceException
+
+            string url = GetUrl();
+
+            string fullPath = string.Format("http://{0}/", url);
             string feed = service.Render(mediae, Owner, fullPath);
 
             return Content(feed, "text/xml");
         }
-        
-        
+
+
         /// <summary>
         /// Randoms the album photo.
         /// </summary>
@@ -130,18 +140,18 @@ namespace TheMemorableMoments.UI.Controllers.User
         public ActionResult RandomAlbumPhoto(string username, int id)
         {
             Media media = _mediaRepository.GetRandomImageByAlbumId(Owner.Id, id);
+            string path = string.Format("{0}Content\\Images\\blank.gif", HttpContext.Request.PhysicalApplicationPath);
 
-            string path = HttpContext.Request.PhysicalApplicationPath + "Content\\Images\\blank.gif";
-            if(media != null)
+            if (media != null)
             {
                 MediaFile mediaFile = media.GetImageByPhotoType(PhotoType.Thumbnail);
                 path = string.Format("{0}Images\\{1}\\{2}", HttpContext.Request.PhysicalApplicationPath, Owner.Username, mediaFile.FilePath.Replace("/", "\\"));
             }
 
             byte[] file = System.IO.File.ReadAllBytes(path);
-// ReSharper disable PossibleNullReferenceException
+            // ReSharper disable PossibleNullReferenceException
             string extension = string.Format("image/{0}", System.IO.Path.GetExtension(path).Replace(".", ""));
-// ReSharper restore PossibleNullReferenceException
+            // ReSharper restore PossibleNullReferenceException
             return File(file, extension);
         }
 

@@ -1,9 +1,9 @@
-namespace TheMemorableMoments.FileService
+namespace Chucksoft.Storage
 {
     /// <summary>
     /// 
     /// </summary>
-    public interface IFileService
+    public interface IStorage
     {
         /// <summary>
         /// Creates the bucket.

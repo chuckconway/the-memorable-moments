@@ -218,7 +218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\DataAccess\" />
-    <Folder Include="Infrastructure\Repositories\AlbumQueries\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -227,9 +226,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments.FileService\TheMemorableMoments.FileService.csproj">
+    <ProjectReference Include="..\TheMemorableMoments.FileService\Chucksoft.Storage.csproj">
       <Project>{867CF744-35A0-45FF-8751-8FC73D8B51C9}</Project>
-      <Name>TheMemorableMoments.FileService</Name>
+      <Name>Chucksoft.Storage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

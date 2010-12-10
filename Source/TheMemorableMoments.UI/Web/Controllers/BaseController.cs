@@ -14,7 +14,6 @@ namespace TheMemorableMoments.UI.Web.Controllers
         public BaseController(ICryptographyService cryptographyService)
         {
             _cryptographyService = cryptographyService;
-
         }
 
         /// <summary>

@@ -5,7 +5,7 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "UploadServiceInstaller", "U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments", "TheMemorableMoments\TheMemorableMoments.csproj", "{12BB4292-D205-45F7-98AA-A24FD11705F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments.FileService", "TheMemorableMoments.FileService\TheMemorableMoments.FileService.csproj", "{867CF744-35A0-45FF-8751-8FC73D8B51C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chucksoft.Storage", "TheMemorableMoments.FileService\Chucksoft.Storage.csproj", "{867CF744-35A0-45FF-8751-8FC73D8B51C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments.UI", "TheMemorableMoments.UI\TheMemorableMoments.UI.csproj", "{8CE1FF56-F801-41DB-B7AA-B09B9C71C504}"
 EndProject

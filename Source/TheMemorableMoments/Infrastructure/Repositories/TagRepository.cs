@@ -18,7 +18,6 @@ namespace TheMemorableMoments.Infrastructure.Repositories
 		public int Insert(Tag tag)
 		{
 			DbParameter outParameter = database.MakeParameter("@Identity", 0, ParameterDirection.Output);
-		
 			List<DbParameter> parameters = new List<DbParameter> 
 			{
 					database.MakeParameter("@TagName",tag.TagText),

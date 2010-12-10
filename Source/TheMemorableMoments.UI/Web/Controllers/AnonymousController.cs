@@ -54,6 +54,10 @@ namespace TheMemorableMoments.UI.Web.Controllers
             return instance;
         }
 
+        /// <summary>
+        /// Gets the authorization.
+        /// </summary>
+        /// <returns></returns>
         protected virtual Authorization GetAuthorization()
         {
             return new Authorization(false, false, Owner, null);

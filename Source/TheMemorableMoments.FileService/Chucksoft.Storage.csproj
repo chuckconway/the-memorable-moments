@@ -8,8 +8,8 @@
     <ProjectGuid>{867CF744-35A0-45FF-8751-8FC73D8B51C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TheMemorableMoments.FileService</RootNamespace>
-    <AssemblyName>TheMemorableMoments.FileService</AssemblyName>
+    <RootNamespace>Chucksoft.Storage</RootNamespace>
+    <AssemblyName>Chucksoft.Storage</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -93,7 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureFileService.cs" />
-    <Compile Include="IFileService.cs" />
+    <Compile Include="IStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

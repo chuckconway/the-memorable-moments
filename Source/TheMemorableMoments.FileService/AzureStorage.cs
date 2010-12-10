@@ -4,9 +4,9 @@ using Chucksoft.Core.Services;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.StorageClient;
 
-namespace TheMemorableMoments.FileService
+namespace Chucksoft.Storage
 {
-    public class AzureFileService : IFileService
+    public class AzureStorage : IStorage
     {
         private readonly IConfigurationService _configurationService;
 
@@ -14,7 +14,7 @@ namespace TheMemorableMoments.FileService
         /// Initializes a new instance of the <see cref="AzureFileService"/> class.
         /// </summary>
         /// <param name="configurationService">The configuration service.</param>
-        public AzureFileService(IConfigurationService configurationService)
+        public AzureStorage(IConfigurationService configurationService)
         {
             _configurationService = configurationService;
         }
