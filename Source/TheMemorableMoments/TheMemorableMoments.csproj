@@ -68,6 +68,9 @@
     <Reference Include="Chucksoft.Core">
       <HintPath>..\..\ThirdParty\Chucksoft.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Chucksoft.Storage">
+      <HintPath>..\..\ThirdParty\Chucksoft.Storage.dll</HintPath>
+    </Reference>
     <Reference Include="Hypersonic">
       <HintPath>..\..\ThirdParty\Hypersonic.dll</HintPath>
     </Reference>
@@ -224,12 +227,6 @@
     <None Include="..\TheMemorableMoments.UI\SN.snk">
       <Link>SN.snk</Link>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments.FileService\Chucksoft.Storage.csproj">
-      <Project>{867CF744-35A0-45FF-8751-8FC73D8B51C9}</Project>
-      <Name>Chucksoft.Storage</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

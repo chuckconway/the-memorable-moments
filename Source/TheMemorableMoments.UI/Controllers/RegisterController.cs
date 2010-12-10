@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
+using Chucksoft.Storage;
 using Chucksoft.Web.Mvc.Common.Authentication;
-using TheMemorableMoments.FileService;
+
 using TheMemorableMoments.UI.Models.Views.UserModels;
 using TheMemorableMoments.UI.Web.Validation;
 
@@ -9,7 +10,7 @@ namespace TheMemorableMoments.UI.Controllers
     public class RegisterController : Controller
     {
         private readonly IUserRepository _userRepository;
-        private readonly IFileService _fileService;
+        private readonly IStorage _fileService;
         private readonly IUserSession<Domain.Model.User> _userSession;
         private readonly IJoinRepository _joinRepository;
 
@@ -20,7 +21,7 @@ namespace TheMemorableMoments.UI.Controllers
         /// <param name="fileService">The file service.</param>
         /// <param name="userSession">The user session.</param>
         /// <param name="joinRepository">The join repository.</param>
-        public RegisterController(IUserRepository userRepository, IFileService fileService, IUserSession<Domain.Model.User> userSession, IJoinRepository joinRepository)
+        public RegisterController(IUserRepository userRepository, IStorage fileService, IUserSession<Domain.Model.User> userSession, IJoinRepository joinRepository)
         {
             _userRepository = userRepository;
             _joinRepository = joinRepository;

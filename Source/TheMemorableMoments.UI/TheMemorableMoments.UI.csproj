@@ -75,6 +75,10 @@
     <Reference Include="Chucksoft.Core.Web.Mvc">
       <HintPath>..\..\ThirdParty\Chucksoft.Core.Web.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Chucksoft.Storage, Version=1.1.0.0, Culture=neutral, PublicKeyToken=cdb97f0d2bac2de7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParty\Chucksoft.Storage.dll</HintPath>
+    </Reference>
     <Reference Include="Chucksoft.Web.Mvc.Common">
       <HintPath>..\..\ThirdParty\Chucksoft.Web.Mvc.Common.dll</HintPath>
     </Reference>
@@ -623,10 +627,6 @@
     <Folder Include="Scripts\Pages\share\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments.FileService\Chucksoft.Storage.csproj">
-      <Project>{867CF744-35A0-45FF-8751-8FC73D8B51C9}</Project>
-      <Name>Chucksoft.Storage</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TheMemorableMoments\TheMemorableMoments.csproj">
       <Project>{12BB4292-D205-45F7-98AA-A24FD11705F3}</Project>
       <Name>TheMemorableMoments</Name>

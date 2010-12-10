@@ -62,7 +62,6 @@ C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\RouteDebug.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\SquishIt.Framework.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\System.Data.SQLite.DLL
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\TheMemorableMoments.dll
-C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\TheMemorableMoments.FileService.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\VistaDB.NET20.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\Microsoft.WindowsAzure.StorageClient.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\AntiXssLibrary.dll
@@ -70,7 +69,6 @@ C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\Yahoo.Yui.Comp
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\AjaxMin.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\dotless.Core.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\EcmaScript.NET.modified.dll
-C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\TheMemorableMoments.FileService.pdb
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\TheMemorableMoments.pdb
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\Autofac.xml
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\Chucksoft.Core.pdb
@@ -88,3 +86,5 @@ C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\dotless.Core.p
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\obj\Debug\TheMemorableMoments.UI.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\obj\Debug\TheMemorableMoments.UI.pdb
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\Chucksoft.Storage.dll
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.UI\bin\Chucksoft.Storage.pdb

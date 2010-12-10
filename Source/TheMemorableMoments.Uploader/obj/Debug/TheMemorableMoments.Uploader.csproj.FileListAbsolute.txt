@@ -25,10 +25,8 @@ C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Th
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Autofac.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Chucksoft.Core.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\TheMemorableMoments.dll
-C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\TheMemorableMoments.FileService.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Hypersonic.dll
-C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\TheMemorableMoments.FileService.pdb
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\TheMemorableMoments.pdb
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Autofac.xml
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Chucksoft.Core.pdb
@@ -40,3 +38,5 @@ C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\obj\Debug\Ge
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\obj\Debug\GenerateResource.write.1.tlog
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\obj\Debug\TheMemorableMoments.Uploader.exe
 C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\obj\Debug\TheMemorableMoments.Uploader.pdb
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Chucksoft.Storage.dll
+C:\Projects\TheMemorableMoments\Source\TheMemorableMoments.Uploader\bin\Debug\Chucksoft.Storage.pdb

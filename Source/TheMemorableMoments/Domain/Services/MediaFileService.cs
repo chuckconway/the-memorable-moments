@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using Chucksoft.Storage;
 using TheMemorableMoments.Domain.Model;
 using TheMemorableMoments.Domain.Model.MediaClasses;
-using TheMemorableMoments.FileService;
+
 
 namespace TheMemorableMoments.Domain.Services
 {
@@ -10,9 +11,9 @@ namespace TheMemorableMoments.Domain.Services
     {
         private readonly IMediaRepository _mediaRepository;
         private readonly IMediaFilenameService _mediaFilenameService;
-        private readonly IFileService _fileService;
+        private readonly IStorage _fileService;
 
-        public MediaFileService(IMediaRepository mediaRepository, IMediaFilenameService mediaFilenameService, IFileService fileService)
+        public MediaFileService(IMediaRepository mediaRepository, IMediaFilenameService mediaFilenameService, IStorage fileService)
         {
             _mediaRepository = mediaRepository;
             _fileService = fileService;

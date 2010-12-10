@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using Chucksoft.Core.Instrumentation;
+using Chucksoft.Storage;
 using TheMemorableMoments.Domain.Model;
 using TheMemorableMoments.Domain.Model.Uploader;
-using TheMemorableMoments.FileService;
+
 using TheMemorableMoments.Infrastructure.Repositories.Uploader;
 
 namespace TheMemorableMoments.Uploader
@@ -14,7 +15,7 @@ namespace TheMemorableMoments.Uploader
         private readonly IUploaderMediaRepository _uploaderMediaRepository = DependencyInjection.Resolve<IUploaderMediaRepository>();
         readonly IMediaQueueRepository _mediaQueueRepository = DependencyInjection.Resolve<IMediaQueueRepository>();
         readonly IUserRepository _userRepository = DependencyInjection.Resolve<IUserRepository>();
-        private readonly IFileService _fileService = DependencyInjection.Resolve<IFileService>();
+        private readonly IStorage _fileService = DependencyInjection.Resolve<IStorage>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TheUploader"/> class.

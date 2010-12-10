@@ -67,6 +67,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\Chucksoft.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Chucksoft.Storage">
+      <HintPath>..\..\ThirdParty\Chucksoft.Storage.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core">
@@ -106,10 +109,6 @@
     <Compile Include="TheUploader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments.FileService\Chucksoft.Storage.csproj">
-      <Project>{867CF744-35A0-45FF-8751-8FC73D8B51C9}</Project>
-      <Name>Chucksoft.Storage</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TheMemorableMoments\TheMemorableMoments.csproj">
       <Project>{12BB4292-D205-45F7-98AA-A24FD11705F3}</Project>
       <Name>TheMemorableMoments</Name>

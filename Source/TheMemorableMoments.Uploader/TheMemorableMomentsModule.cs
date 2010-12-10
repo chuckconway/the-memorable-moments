@@ -1,8 +1,9 @@
 ﻿using Autofac;
 using Chucksoft.Core.Drawing;
 using Chucksoft.Core.Services;
+using Chucksoft.Storage;
 using TheMemorableMoments.Domain.Services;
-using TheMemorableMoments.FileService;
+
 using TheMemorableMoments.Infrastructure.Repositories;
 using TheMemorableMoments.Infrastructure.Repositories.Services;
 using TheMemorableMoments.Infrastructure.Repositories.Uploader;
@@ -54,7 +55,7 @@ namespace TheMemorableMoments.Uploader
             this.RegisterType<JoinRepository>().As<IJoinRepository>();
             this.RegisterType<MediaFileService>().As<IMediaFileService>();
             this.RegisterType<MediaFilenameService>().As<IMediaFilenameService>();
-            this.RegisterType<AzureFileService>().As<IFileService>();
+            this.RegisterType<AzureStorage>().As<IStorage>();
 
 
             this.RegisterType<LocationRepository>().As<ILocationRepository>();

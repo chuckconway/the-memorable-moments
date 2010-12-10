@@ -2,10 +2,10 @@
 using Chucksoft.Core.Drawing;
 using Chucksoft.Core.Services;
 using Chucksoft.Core.Web.CacheProviders;
+using Chucksoft.Storage;
 using Chucksoft.Web.Mvc.Common.Authentication;
 using TheMemorableMoments.Domain.Model;
 using TheMemorableMoments.Domain.Services;
-using TheMemorableMoments.FileService;
 using TheMemorableMoments.Infrastructure.Repositories;
 using TheMemorableMoments.Infrastructure.Repositories.Services;
 using TheMemorableMoments.Infrastructure.Repositories.Uploader;
@@ -64,7 +64,7 @@ namespace TheMemorableMoments.UI
             this.RegisterType<JoinRepository>().As<IJoinRepository>();
             this.RegisterType<MediaFileService>().As<IMediaFileService>();
             this.RegisterType<MediaFilenameService>().As<IMediaFilenameService>();
-            this.RegisterType<AzureFileService>().As<IFileService>();
+            this.RegisterType<AzureStorage>().As<IStorage>();
             this.RegisterType<HttpCachingProvider>().As<ICacheProvider>();
             this.RegisterType<PopulateSidebarView>().As<IPopulateSidebarView>();
 

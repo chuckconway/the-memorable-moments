@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Chucksoft.Core.Drawing;
+using Chucksoft.Storage;
 using TheMemorableMoments.Domain.Model;
 using TheMemorableMoments.Domain.Model.MediaClasses;
-using TheMemorableMoments.FileService;
+
 
 namespace TheMemorableMoments.Domain.Services
 {
     public class ImageService : IImageService
     {
-        private readonly IFileService _fileService;
+        private readonly IStorage _fileService;
         private IMediaFileRepository _mediaFileRepository;
 
 
@@ -18,7 +19,7 @@ namespace TheMemorableMoments.Domain.Services
         /// </summary>
         /// <param name="fileService">The file service.</param>
         /// <param name="mediaFileRepository">The media file repository.</param>
-        public ImageService(IFileService fileService, IMediaFileRepository mediaFileRepository)
+        public ImageService(IStorage fileService, IMediaFileRepository mediaFileRepository)
         {
             _fileService = fileService;
             _mediaFileRepository = mediaFileRepository;
