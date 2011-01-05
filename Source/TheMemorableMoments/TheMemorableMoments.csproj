@@ -93,6 +93,7 @@
     <Compile Include="..\TheMemorableMoments.UI\Properties\AssemblyInfo.cs">
       <Link>AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Domain\Handlers\IHandles.cs" />
     <Compile Include="Domain\Model\Albums\Album.cs" />
     <Compile Include="Domain\Model\Albums\AlbumMedia.cs" />
     <Compile Include="Domain\Model\Albums\MediaPosition.cs" />
