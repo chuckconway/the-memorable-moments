@@ -1,5 +1,0 @@
-ALTER DATABASE [$(DatabaseName)]
-    ADD FILE (NAME = [ThePhotoProject], FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA\ThePhotoProject.mdf', SIZE = 13312 KB, MAXSIZE = UNLIMITED, FILEGROWTH = 1024 KB) TO FILEGROUP [PRIMARY];
-
-
-
