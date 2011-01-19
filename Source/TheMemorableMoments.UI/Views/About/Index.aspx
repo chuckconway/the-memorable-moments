@@ -7,14 +7,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h3>philosophy</h3>
-    <p>Every photo is important. Each photo is center stage.</p>  
+    <p>Every photo is important, each photo is center stage.</p>  
         
     <h3>mission</h3>    
-    <p>Every photo has a story. Our mission is to share the story.</p>
+    <p>Every photo has a story, our mission is to share each story.</p>
         
     <h3>dedication</h3>
     <p>Debra Lee Hanford: a mother, a sister, an auntie, a friend and a wife. She was passionate and just.
-        Debra loved photography. We are sharing her love of photography throught the memorable moments. </p>         
+        Debra loved photography. We are sharing her love of photography through the memorable moments. </p>         
 
 </asp:Content>
 
