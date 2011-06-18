@@ -16,13 +16,13 @@ BEGIN
 BEGIN TRY
 	Begin Transaction
 	
-	--CREATE TABLE #tempFile
-	--(
-	--   FileId INT
-	--)
+	CREATE TABLE #tempFile
+	(
+	   FileId INT
+	)
 	
+	Insert Into #tempFile(FileId)
 	Select F.FileId 
-	INTO #tempFile
 	From [File] F
 	Inner Join MediaFile MF
 		On F.FileId = MF.FileId

@@ -2,7 +2,7 @@
 -- Author: Chucksoft CodeGen
 -- Create date: Saturday, November 14, 2009
 -- =============================================
-Create PROCEDURE  [dbo].[Album_DeleteAlbumIncludingSubAlbums]
+CREATE PROCEDURE  [dbo].[Album_DeleteAlbumIncludingSubAlbums]
 (
 	@UserId int,
 	@AlbumId int
@@ -18,6 +18,13 @@ BEGIN
 
  -- Set	@UserId = 9
  -- Set	@AlbumId = 5
+ 
+ 
+Create Table #tempAlbum
+(
+	AlbumId int,
+	HLevel int	
+)
 
 ;WITH Hierarchy(AlbumID, Name, ParentID, HLevel)
 AS
@@ -34,8 +41,9 @@ AS
     SubAlbum.ParentId = ParentDepartment.AlbumID 
 )
 
+
+Insert Into #tempAlbum(AlbumId, HLevel)
 Select A.AlbumId, HLevel
-Into #tempAlbum
 FROM  Hierarchy Inner Join Album A ON
 Hierarchy.AlbumID = A.AlbumId
 Where A.UserId = @UserId

@@ -13,10 +13,19 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
+Create Table #MediaWithYear
+(
+	MediaYear int null,
+	CreateDate datetime not null,
+	Status nvarchar(50) not null,
+	UploadStatus nvarchar(50) not null,
+	UserId int not null
+)
+
 
     -- Insert statements for procedure here
-	Select E.*, M.CreateDate, M.Status, M.UploadStatus, M.UserId
-Into #MediaWithYear 
+Insert Into #MediaWithYear(MediaYear, CreateDate, Status, UploadStatus, UserId)
+Select E.MediaYear, M.CreateDate, M.Status, M.UploadStatus, M.UserId
 From (Select	MediaId,
 			Title,
 			Description,

@@ -15,9 +15,13 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 	
-	
+	Create Table #Year
+	(
+		MediaId int not null
+	)
+
+	Insert Into #Year(MediaId)	
 	Select M.MediaId
-	Into #Year
 	From (Select	MediaId,
 			Title,
 			Description,
