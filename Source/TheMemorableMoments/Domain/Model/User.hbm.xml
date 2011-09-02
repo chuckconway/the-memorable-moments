@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="TheMemorableMoments"
+                   namespace="TheMemorableMoments.Domain.Model">
+
+  <class name="User" table="User" >
+    <id name="Id">
+      <generator class="identity"  />
+    </id>
+    <property name="FirstName" not-null="true" />
+    <property name="LastName" not-null="true" />
+    <property name="Password" not-null="true" />
+    <property name="Email" />
+    <property name="DisplayName" />
+    <property name="Deleted" />
+    <property name="Username" not-null="true" />
+    <property name="AccountStatus" />
+    <component name="Settings" >
+      <property name="EnableReceivingOfEmails" />
+      <property name="WebViewMaxWidth" />
+      <property name="WebViewMaxHeight" />
+      <property name="MaxInvitations" />
+    </component>
+  </class>
+
+</hibernate-mapping>
