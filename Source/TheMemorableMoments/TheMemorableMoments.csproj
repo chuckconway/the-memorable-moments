@@ -66,10 +66,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Chucksoft.Core">
-      <HintPath>..\..\ThirdParty\Chucksoft.Core.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Storage">
-      <HintPath>..\..\ThirdParty\Chucksoft.Storage.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Storage.dll</HintPath>
     </Reference>
     <Reference Include="Hypersonic">
       <HintPath>..\..\ThirdParty\Hypersonic.dll</HintPath>

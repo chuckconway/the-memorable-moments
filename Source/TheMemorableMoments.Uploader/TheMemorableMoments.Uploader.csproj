@@ -61,14 +61,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\ThirdParty\Autofac.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Autofac\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Core, Version=2.0.1.7, Culture=neutral, PublicKeyToken=3480c36974861ddd, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ThirdParty\Chucksoft.Core.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Storage">
-      <HintPath>..\..\ThirdParty\Chucksoft.Storage.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Storage.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
