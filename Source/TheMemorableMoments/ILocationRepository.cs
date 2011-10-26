@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Data;
 using TheMemorableMoments.Domain.Model.MediaClasses;
 
-namespace TheMemorableMoments
+namespace TheMemorableMoments 
 {
     public interface ILocationRepository
     {

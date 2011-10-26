@@ -54,33 +54,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Autofac">
-      <HintPath>..\..\ThirdParty\Autofac.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Autofac\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Web">
-      <HintPath>..\..\ThirdParty\Autofac.Integration.Web.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Autofac\Autofac.Integration.Web.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.Web.Mvc">
-      <HintPath>..\..\ThirdParty\Autofac.Integration.Web.Mvc.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Autofac\Autofac.Integration.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="AutoMapper">
       <HintPath>..\..\ThirdParty\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Core, Version=2.0.1.7, Culture=neutral, PublicKeyToken=3480c36974861ddd, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ThirdParty\Chucksoft.Core.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Core.Web">
-      <HintPath>..\..\ThirdParty\Chucksoft.Core.Web.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.Web.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Core.Web.Mvc">
-      <HintPath>..\..\ThirdParty\Chucksoft.Core.Web.Mvc.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.Web.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Storage, Version=1.1.0.0, Culture=neutral, PublicKeyToken=cdb97f0d2bac2de7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ThirdParty\Chucksoft.Storage.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Storage.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Web.Mvc.Common">
-      <HintPath>..\..\ThirdParty\Chucksoft.Web.Mvc.Common.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Web.Mvc.Common.dll</HintPath>
     </Reference>
     <Reference Include="Elmah">
       <HintPath>..\..\ThirdParty\Elmah.dll</HintPath>
@@ -95,9 +95,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\MvcContrib.dll</HintPath>
     </Reference>
-    <Reference Include="MvcContrib.IncludeHandling">
-      <HintPath>..\..\ThirdParty\MvcContrib.IncludeHandling.dll</HintPath>
-    </Reference>
     <Reference Include="Rhino.Mocks">
       <HintPath>..\..\ThirdParty\Rhino.Mocks.dll</HintPath>
     </Reference>
@@ -105,7 +102,7 @@
       <HintPath>..\..\ThirdParty\RouteDebug.dll</HintPath>
     </Reference>
     <Reference Include="SquishIt.Framework">
-      <HintPath>..\..\ThirdParty\SquishIt.Framework.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Squishit\SquishIt.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -597,6 +594,7 @@
     </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
