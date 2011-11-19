@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title> </title>
+    <style type="text/css"> @import url("/Content/css/common.css"); </style>
+    <script language="javascript" type="text/javascript" src="/Scripts/Frameworks/jquery.js"></script>
+        <script language="javascript" type="text/javascript" src="/Scripts/Controls/jquery.jnotifica.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/Controls/jquery.imgpreview.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/Frameworks/Microsoft/MicrosoftAjax.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/Frameworks/Microsoft/MicrosoftMvcValidation.js"></script>
+    <script language="javascript" type="text/javascript" src="/Scripts/Pages/common.js"></script>
+
+    @RenderSection("head", required: false)    
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var pageTracker = _gat._getTracker("UA-191406-4");
+                pageTracker._trackPageview();
+            } catch (err) { }
+    </script>    
+</head>
+
+<body>
+    <div class="page">
+    	<div id="body">    	
+            @RenderSection("MainContent", required: false)
+            <div class="clearboth" ></div>
+        </div>
+    </div>
+</body>
+</html>

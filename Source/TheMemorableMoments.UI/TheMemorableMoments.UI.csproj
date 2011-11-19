@@ -546,49 +546,17 @@
     <Content Include="Scripts\Controls\Treeview\jquery.treeview.async.js" />
     <Content Include="Scripts\Controls\Treeview\jquery.treeview.js" />
     <Content Include="Scripts\Controls\Treeview\jquery.treeview.min.js" />
-    <Content Include="Views\About\Index.aspx" />
-    <Content Include="Views\Account\Index.aspx" />
-    <Content Include="Views\Account\Settings.aspx" />
-    <Content Include="Views\Albums\Add.aspx" />
-    <Content Include="Views\Albums\AddPhotos.aspx" />
-    <Content Include="Views\Albums\BySearching.ascx" />
-    <Content Include="Views\Albums\ByTags.ascx" />
-    <Content Include="Views\Albums\Details.aspx" />
-    <Content Include="Views\Albums\Photos.aspx" />
-    <Content Include="Views\Albums\Index.aspx" />
-    <Content Include="Views\Albums\All.ascx" />
-    <Content Include="Views\Albums\Tree.aspx" />
-    <Content Include="Views\Comments\Index.aspx" />
-    <Content Include="Views\Comments\Leave.aspx" />
-    <Content Include="Views\Dashboard\Index.aspx" />
-    <Content Include="Views\Friends\Add.aspx" />
-    <Content Include="Views\Friends\All.aspx" />
-    <Content Include="Views\Friends\Index.aspx" />
-    <Content Include="Views\Friends\Invite.aspx" />
-    <Content Include="Views\Photos\ManagedPhotoView.ascx" />
-    <Content Include="Views\Photos\SearchView.ascx" />
-    <Content Include="Views\Photos\Show.aspx" />
-    <Content Include="Views\Recent\Index.aspx" />
-    <Content Include="Views\Join\Index.aspx" />
-    <Content Include="Views\Login\Index.aspx" />
-    <Content Include="Views\Login\LogOff.aspx" />
-    <Content Include="Views\Directory\Index.aspx" />
-    <Content Include="Views\Oops\Index.aspx" />
-    <Content Include="Views\Photos\Edit.aspx" />
-    <Content Include="Views\Photos\Index.aspx" />
-    <Content Include="Views\Photos\Rollback.aspx" />
-    <Content Include="Views\Register\Index.aspx" />
-    <Content Include="Views\Search\Index.aspx" />
-    <Content Include="Views\Tags\GalleryView.ascx" />
-    <Content Include="Views\Tags\Index.aspx" />
-    <Content Include="Views\Share\Index.aspx" />
-    <Content Include="Views\Tags\Edit.aspx" />
-    <Content Include="Views\Tags\Show.aspx" />
-    <Content Include="Views\Upload\AddDetails.aspx" />
-    <Content Include="Views\Upload\Index.aspx" />
-    <Content Include="Views\User\Index.aspx" />
-    <Content Include="Views\User\Search.aspx" />
-    <Content Include="Views\Year\Index.aspx" />
+    <Content Include="Views\About\index.cshtml" />
+    <Content Include="Views\Recent\index.cshtml" />
+    <Content Include="Views\Register\index.cshtml" />
+    <Content Include="Views\Search\index.cshtml" />
+    <Content Include="Views\Shared\modal.cshtml" />
+    <Content Include="Views\Shared\site.cshtml" />
+    <Content Include="Views\Share\index.cshtml" />
+    <Content Include="Views\Tags\edit.cshtml" />
+    <Content Include="Views\Tags\galleryview.cshtml" />
+    <Content Include="Views\Tags\index.cshtml" />
+    <Content Include="Views\Tags\show.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -600,7 +568,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Home\Index.aspx" />
-    <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -643,7 +610,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SN.snk" />
-    <Content Include="Views\Shared\Modal.Master" />
+    <Content Include="Views\Account\index.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Account\settings.cshtml" />
+    <Content Include="Views\Albums\add.cshtml" />
+    <Content Include="Views\Albums\addphotos.cshtml" />
+    <Content Include="Views\Albums\all.cshtml" />
+    <Content Include="Views\Albums\bysearching.cshtml" />
+    <Content Include="Views\Albums\bytags.cshtml" />
+    <Content Include="Views\Albums\details.cshtml" />
+    <Content Include="Views\Albums\index.cshtml" />
+    <Content Include="Views\Albums\photos.cshtml" />
+    <Content Include="Views\Albums\tree.cshtml" />
+    <Content Include="Views\Comments\index.cshtml" />
+    <Content Include="Views\Comments\leave.cshtml" />
+    <Content Include="Views\Dashboard\index.cshtml" />
+    <Content Include="Views\Directory\index.cshtml" />
+    <Content Include="Views\Friends\add.cshtml" />
+    <Content Include="Views\Friends\all.cshtml" />
+    <Content Include="Views\Friends\index.cshtml" />
+    <Content Include="Views\Friends\invite.cshtml" />
+    <Content Include="Views\Join\index.cshtml" />
+    <Content Include="Views\Login\index.cshtml" />
+    <Content Include="Views\Login\logoff.cshtml" />
+    <Content Include="Views\Oops\index.cshtml" />
+    <Content Include="Views\Photos\edit.cshtml" />
+    <Content Include="Views\Photos\index.cshtml" />
+    <Content Include="Views\Photos\managedphotoview.cshtml" />
+    <Content Include="Views\Photos\rollback.cshtml" />
+    <Content Include="Views\Photos\searchview.cshtml" />
+    <Content Include="Views\Photos\show.cshtml" />
+    <Content Include="Views\Upload\adddetails.cshtml" />
+    <Content Include="Views\Upload\index.cshtml" />
+    <Content Include="Views\User\index.cshtml" />
+    <Content Include="Views\User\search.cshtml" />
+    <Content Include="Views\Year\index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
