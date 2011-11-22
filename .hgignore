@@ -4,6 +4,7 @@ syntax: glob
 *.user
 *.FileListAbsolute.txt
 *\bin\*
+*\Bin\*
 *\obj\*
 *.ncb
 *.nlb

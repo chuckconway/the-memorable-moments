@@ -13,6 +13,8 @@ Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "TheMemorableMoments.Databas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments.Tests", "TheMemorableMoments.Tests\TheMemorableMoments.Tests.csproj", "{AA4192BB-660C-4DA8-AAC1-449166EB12E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments.Aop", "TheMemorableMoments.Aop\TheMemorableMoments.Aop.csproj", "{2B605C85-355E-4791-96E3-1A2BE4B65E8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,14 @@ Global
 		{AA4192BB-660C-4DA8-AAC1-449166EB12E2}.QA|Any CPU.Build.0 = Release|Any CPU
 		{AA4192BB-660C-4DA8-AAC1-449166EB12E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA4192BB-660C-4DA8-AAC1-449166EB12E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.QA|Any CPU.Build.0 = Release|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
