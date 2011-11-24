@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Friend" table="Friend" lazy="true" >
+    <many-to-one insert="false" update="false" lazy="false" name="FriendId">
+      <column name="FriendId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="FriendId">
+      <column name="FriendId" sql-type="int" not-null="true" />
+    </property>
+    <many-to-one insert="false" update="false" lazy="false" name="UserId">
+      <column name="UserId" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="UserId">
+      <column name="UserId" sql-type="int" not-null="true" />
+    </property>
+    <property name="CreateDate">
+      <column name="CreateDate" sql-type="datetime2" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

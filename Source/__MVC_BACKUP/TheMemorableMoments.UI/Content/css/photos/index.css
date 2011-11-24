@@ -1,0 +1,11 @@
+﻿
+table.results img.deleteimage {background-color:#fff;border:none;padding:0px; vertical-align:middle;width:12px; height:12px;}
+
+table.results tr td.edit {width:150px;}
+
+a.removetag, a.removetag:hover {background:transparent url('/content/images/greyremove.jpg') no-repeat 0% 0%; width:12px; height:12px; display:inline-block; vertical-align:middle;}
+a.removetag:hover {background:transparent url('/content/images/redremove.jpg') no-repeat 0% 0%;}
+
+
+p.paging {text-align:right;}
+span.taggroup {margin-right:10px;}

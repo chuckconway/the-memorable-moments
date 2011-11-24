@@ -1,0 +1,103 @@
+@model TheMemorableMoments.UI.Models.Views.Dashboard.DashboardView
+@using TheMemorableMoments.Domain.Model.MediaClasses
+@{ Import Namespace="TheMemorableMoments.UI.Web"}
+
+@{ 
+ ViewBag.Title = "dashboard  - @(Model.Authorization.Owner.DisplayName)"; 
+}
+
+@section pageHeader { 
+@(Model.Authorization.Owner.DisplayName) 
+}
+
+@section navigation { 
+@(UserNavigationHelper.GetUserNavigation(Model.Authorization)) 
+}
+
+@section MainContent { 
+<div id="userheader">
+            @(UserNavigationHelper.GetBreadCrumbs(Model.BreadCrumbs))
+    </div>
+    
+    <p class="uploadlink" ><a class="buttonstyle" href="/@(Model.Authorization.Owner.Username)/upload" >Upload Photos</a></p>
+    <br class="clearboth" />
+    
+    <div class="leftcolumn">
+        <h3 class="subtitle">activity</h3> 
+
+        @(Model.RecentFriendActivity)
+
+    </div>
+
+        <div class="middlecolumn">
+    
+             <h3 class="subtitle" >most viewed photos</h3>                
+                 @if(Model.TopTenViewed.Count > 0) {
+            
+                <ul class="topfive" >
+
+                @{ int count = 1;}
+ @foreach (var top in Model.TopTenViewed) {
+          
+                    <li>
+                       <span >@(count) </span> 
+                       <ul>
+                            <li><img class="topten" src="@(Model.UrlService.CreateImageUrl(top.GetImageByPhotoType(PhotoType.Thumbnail).FilePath))" alt="@(top.Title)" /></li>
+                            <li><span>@(top.ViewCount) views</span></li>
+                       </ul> 
+                       <br class="clearboth" />
+                    </li>
+                
+                @{ count++;
+                }}
+
+
+            </ul>
+
+        }
+    
+    </div>
+
+    <div class="rightcolumn">
+
+         <h3 class="subtitle" >statistics</h3>                
+                 @if(Model.SiteStats.Count > 0) {
+            
+            <ul class="dashboardstats" style="text-transform:lowercase;" >
+
+            @foreach (var stat in Model.SiteStats) {
+      
+                <li>@(stat.Name) <span>@(stat.Count)</span></li>
+            
+            }
+
+            </ul>
+
+        }
+
+       <h3 class="subtitle margintop30" >comments</h3> 
+
+        @if(Model.Comments.Count > 0) {
+            
+            <ul class="dashboardstats"  >
+
+            @foreach (var comment in Model.Comments) {
+      
+                <li>@(comment.Name) <span>@(comment.Count)</span></li>
+            
+            }
+
+            </ul>
+
+        }
+
+    </div>
+
+    <br class="clearboth" /> 
+}
+
+@section head { 
+<style type="text/css"> 
+            @import url("/Content/css/dashboard/index.css");
+        </style> 
+}

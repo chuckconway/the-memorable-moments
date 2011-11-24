@@ -1,12 +1,13 @@
 @model TheMemorableMoments.UI.Models.Views.UserModels.UserHomeView
+
+@using TheMemorableMoments.UI.Web
+@using TheMemorableMoments.UI.Widgets
 @using TheMemorableMoments.UI.Web.Controls
 @using TheMemorableMoments.UI.Web.Helpers
-@{ Import Namespace="TheMemorableMoments.UI.Widgets"}
-@{ Import Namespace="TheMemorableMoments.UI.Web"}
 
-
-@{ 
- ViewBag.Title = "@(Model.Authorization.Owner.DisplayName)'s home"; 
+@{
+   Layout = "~/Views/Shared/site.cshtml";
+   ViewBag.Title = "@(Model.Authorization.Owner.DisplayName)'s home"; 
 }
 
 @section pageHeader { 
@@ -20,7 +21,7 @@
             img{ max-height:@(Model.Authorization.Owner.Settings.WebViewMaxHeight)px; max-width:@(Model.Authorization.Owner.Settings.WebViewMaxWidth)px; }            
         </style> 
     
-    <script language="javascript" type="text/javascript">
+    <script type="text/javascript">
        var maxHeight = @(Model.Authorization.Owner.Settings.WebViewMaxHeight);
        var maxWidth = @(Model.Authorization.Owner.Settings.WebViewMaxWidth);
        var username = "@(Model.Authorization.Owner.Username)";    

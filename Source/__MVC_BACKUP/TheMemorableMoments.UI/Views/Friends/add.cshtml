@@ -1,0 +1,21 @@
+@model TheMemorableMoments.UI.Models.Views.Friends.FriendAllView
+@{ Import Namespace="TheMemorableMoments.UI.Web"}
+
+@{ 
+ ViewBag.Title = "add friends  - @(Model.Authorization.Owner.DisplayName)"; 
+}
+
+@section MainContent { 
+<asp:Content ID="Content5" ContentPlaceHolderID="pageHeader" runat="server">
+	@(Model.Authorization.Owner.DisplayName) 
+}
+
+</asp:Content>
+
+@section head { 
+ 
+}
+
+@section navigation { 
+@(UserNavigationHelper.GetUserNavigation(Model.Authorization)) 
+}

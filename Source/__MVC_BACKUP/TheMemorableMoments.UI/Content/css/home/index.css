@@ -1,0 +1,7 @@
+﻿div.search {text-align:right;margin-top:15px;}
+
+div#randomphotos {margin-top:30px;}
+
+div#randomphotos ul,  ul.thumbs{ margin-left:5px; }
+div#randomphotos ul li a img, ul.thumbs li a img{ border:none;}
+div#randomphotos ul li,  ul.thumbs li {display:block;width:55px;height:70px;overflow:hidden;float:left;margin:0 10px 10px 0;}

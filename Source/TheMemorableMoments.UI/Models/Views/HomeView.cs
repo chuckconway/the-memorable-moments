@@ -17,7 +17,7 @@ namespace TheMemorableMoments.UI.Models.Views
         /// </summary>
         /// <param name="media">The media.</param>
         /// <returns></returns>
-        public  string GetImageLink(Media media)
+        public string GetImageLink(Media media)
         {
             Func<string, string> title =
                 s => (string.IsNullOrEmpty(media.Title)

@@ -65,6 +65,9 @@
     <AssemblyOriginatorKeyFile>..\TheMemorableMoments.UI\SN.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChuckConway.Cqrs">
+      <HintPath>..\..\ThirdParty\ChuckConway\ChuckConway.Cqrs.dll</HintPath>
+    </Reference>
     <Reference Include="Chucksoft.Core">
       <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.dll</HintPath>
     </Reference>
@@ -72,7 +75,19 @@
       <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Storage.dll</HintPath>
     </Reference>
     <Reference Include="Hypersonic">
-      <HintPath>..\..\ThirdParty\Hypersonic.dll</HintPath>
+      <HintPath>..\..\ThirdParty\Hypersonic\Hypersonic.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\ThirdParty\nHibernate\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\..\ThirdParty\nHibernate\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>..\..\ThirdParty\nHibernate\NHibernate.ByteCode.LinFu.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -150,6 +165,35 @@
     <Compile Include="Domain\Services\MediaFileService.cs" />
     <Compile Include="Domain\Services\QueueFileService.cs" />
     <Compile Include="Domain\Services\ResizerService.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Album.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\AlbumMedium.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Comment.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Configuration.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Exif.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\File.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Friend.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Group.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\GroupUser.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Invitation.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Location.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\MediaFile.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Media.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\MediaQueue.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\MediaUploadBatch.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\MediaViewed.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Medium.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\PersistentCollection.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\RecentActivity.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Tag.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\TagMedium.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Token.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\UploadBatch.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\User.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Viewed.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\WaitingList.cs" />
+    <Compile Include="Infrastructure\Data\Queries\Home\HomeIndexQuery.cs" />
+    <Compile Include="Infrastructure\Data\Queries\IQuery.cs" />
+    <Compile Include="Infrastructure\Projections\HomeIndexProjection.cs" />
     <Compile Include="Infrastructure\Repositories\AlbumRepository.cs" />
     <Compile Include="Infrastructure\Repositories\BelongsToAlbumRepository.cs" />
     <Compile Include="Infrastructure\Repositories\CommentRepository.cs" />
@@ -221,13 +265,42 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Infrastructure\DataAccess\" />
+    <Folder Include="CommandHandlers\" />
+    <Folder Include="Commands\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\TheMemorableMoments.UI\SN.snk">
       <Link>SN.snk</Link>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Album.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\AlbumMedium.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Comment.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Configuration.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Exif.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\File.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Friend.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Group.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\GroupUser.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Invitation.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Location.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaFile.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaLedger.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaQueue.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaUploadBatch.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaViewed.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Medium.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\PersistentCollection.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\RecentActivity.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Tag.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\TagMedium.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Token.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\UploadBatch.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Viewed.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\WaitingList.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

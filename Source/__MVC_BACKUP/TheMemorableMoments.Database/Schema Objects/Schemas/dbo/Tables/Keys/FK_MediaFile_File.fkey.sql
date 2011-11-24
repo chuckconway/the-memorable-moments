@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[MediaFile]
+    ADD CONSTRAINT [FK_MediaFile_File] FOREIGN KEY ([FileId]) REFERENCES [dbo].[File] ([FileId]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+

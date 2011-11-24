@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Token" table="Token" lazy="true" >
+    <property name="Token">
+      <column name="Token" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="CreateDate">
+      <column name="CreateDate" sql-type="datetime2" not-null="true" />
+    </property>
+    <property name="IsValid">
+      <column name="IsValid" sql-type="bit" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

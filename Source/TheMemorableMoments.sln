@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMemorableMoments.Aop", "TheMemorableMoments.Aop\TheMemorableMoments.Aop.csproj", "{2B605C85-355E-4791-96E3-1A2BE4B65E8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momntz.UI", "Momntz.UI\Momntz.UI.csproj", "{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,14 @@ Global
 		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.QA|Any CPU.Build.0 = Release|Any CPU
 		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B605C85-355E-4791-96E3-1A2BE4B65E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.QA|Any CPU.Build.0 = Release|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

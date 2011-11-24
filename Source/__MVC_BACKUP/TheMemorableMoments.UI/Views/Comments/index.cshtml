@@ -1,0 +1,97 @@
+@model TheMemorableMoments.UI.Models.Views.Comments.ManageCommentsView
+@using MvcContrib.UI.Grid
+@{ Import Namespace="TheMemorableMoments.UI.Web"}
+@using TheMemorableMoments.UI.Web.Helpers
+
+@{ 
+ ViewBag.Title = "manage comments - @(Model.Authorization.Owner.DisplayName)"; 
+}
+
+@section pageHeader { 
+@(Model.Authorization.Owner.DisplayName) 
+}
+
+@section navigation { 
+@(UserNavigationHelper.GetUserNavigation(Model.Authorization)) 
+}
+
+@section MainContent { 
+<div id="userheader">
+            @(UserNavigationHelper.GetBreadCrumbs(Model.BreadCrumbs))
+    </div> 
+    
+     <div class="nav"> 
+		<ul style="float:right;" >
+            <li><a href="/@(Model.Authorization.Owner.Username)/photos/">Photos</a></li>
+            <li><a href="/@(Model.Authorization.Owner.Username)/photos/search">Search</a></li>
+ 			<li><a class="youarehere" href="/@(Model.Authorization.Owner.Username)/comments">Comments</a></li> 
+		</ul> 
+        <br style="clear:both;display:inline;" />
+    </div>  
+    
+    <div id="photoarea" class="hidden">
+        @using (Html.BeginForm()) { 
+
+        @(Model.RenderViewNavigation(Model.View, Model.Authorization.Owner))
+                
+      		    @if(Model.Pagination.TotalPages > 1){<p class="paging" > showing @(Model.Pagination.CurrentPage) of @(Model.Pagination.TotalPages) pages </p>}
+                @(Html.Grid(Model.Pagination.PageSet).Attributes(new Dictionary<string, object>{{"class","width100percent results"}})
+                    .Columns(c => c.For(x => string.Format("<input type=\"checkbox\" value=\"{0}\" name=\"commentid\"/>", x.Comment.CommentId)).DoNotEncode().Named("all <br /><input type=\"checkbox\" id=\"all\">"))
+                    .Columns(c => c.For(x => Model.GetImageHtml(x.Media)).DoNotEncode().Named(string.Empty))
+                    .Columns(c => c.For(x => Model.RenderAuthorDetails(x.Comment)).DoNotEncode().Named(string.Empty))
+                    .Columns(c => c.For(x => string.Format("<p class=\"commentdate\" >{0} </p><p class=\"commentcomment\" >{1}</p>", x.Comment.CommentDate.ToString("f"), x.Comment.Text)).DoNotEncode().Named(string.Empty)))
+                       
+                 <p>@(Model.Pagination.RenderedPagination)</p>         
+
+                <div style="margin-top:10px;text-align:right;">
+                   <p class="privacy displayinline"  > 
+                   <select style="color:#999;" name="CommentActionType">
+                        <option selected="selected" value="-1">select action</option>
+                        <option value="Approved">approve</option>
+                        <option value="Spam">mark as spam</option>
+                        <option value="Deleted">delete</option>
+                    </select></p> 
+                   <p class="actionbutton submit displayinline"> <input type="submit" value="Apply Action"  name="action"/></p>
+                   @(Html.Message(Model.UIMessage))
+                </div>
+            
+             }
+             
+             </div> 
+}
+
+@section head { 
+<style type="text/css">
+        @import url("/Content/css/common.css");
+        @import url("/Content/css/comments/index.css");   
+    </style>
+    
+    <script language="javascript" type="text/javascript" src="/Scripts/jquery.jnotifica.min.js"></script>
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function() {
+            fadeIn('div#photoarea');
+
+            $("input#all").click(function () {
+                var checked_status = this.checked;
+                $("table tr td input[name=commentid]").each(function () {
+                    this.checked = checked_status;
+                });
+            });
+
+        });
+    
+    		    function fadeIn(name) {
+
+		        var sidebar = $(name);
+		        sidebar.removeClass("hidden");
+		        sidebar.hide();
+		        sidebar.fadeIn("slow");
+
+		        var message = '@(Model.UIMessage)';
+		        showMessage(message);
+
+		    }
+		    
+    </script> 
+}

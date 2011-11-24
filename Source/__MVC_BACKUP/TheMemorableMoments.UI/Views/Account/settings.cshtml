@@ -1,0 +1,63 @@
+@model TheMemorableMoments.UI.Models.Views.SettingsView
+@{ Import Namespace="TheMemorableMoments.UI.Web"}
+@{ Import Namespace="Microsoft.Web.Mvc"}
+@using TheMemorableMoments.UI.Web.Helpers
+
+@{ 
+ ViewBag.Title = "account settings - @(Model.Authorization.Owner.DisplayName)"; 
+}
+@section navigation { 
+@(UserNavigationHelper.GetUserNavigation(Model.Authorization)) 
+}
+
+@section pageHeader { 
+@(Model.Authorization.Owner.DisplayName) 
+}
+
+@section MainContent { 
+<div id="userheader">
+            @(UserNavigationHelper.GetBreadCrumbs(Model.BreadCrumbs))
+    </div>
+    
+     <div class="nav"> 
+        <ul style="float:right;" >
+             <li><a   href="/@(Model.Authorization.Owner.Username)/account/">Details</a></li>
+             <li><a class="youarehere" href="/@(Model.Authorization.Owner.Username)/account/settings">Settings</a></li>
+        </ul> 
+        <br style="clear:both;display:inline;" />
+    </div> 
+    
+    @{ Html.EnableClientValidation();}
+
+    @using (Html.BeginForm()) { 
+    
+        <div class="form">   
+
+        <p><label style="display:inline;">I want to be notified when my friends add or update their photos</label>@(Html.CheckBox("EnableReceivingOfEmails", Model.EnableReceivingOfEmails, new Dictionary<string, object> { { "class", "checkboxinput" } }))</p>
+
+        <h3>Photo diminsion</h3>
+        <p>
+            <label>Width (max.)</label>
+            @(Html.TextBox("WebViewMaxWidth", Model.WebViewMaxWidth, new Dictionary<string, object>{{"style","width:75px;"},{"maxlength","4"}}))
+            @(Html.ValidationMessageFor(model =>model.WebViewMaxWidth))
+        </p>
+        <p>
+            <label>Height (max.)</label>
+            @(Html.TextBox("WebViewMaxHeight", Model.WebViewMaxHeight, new Dictionary<string, object>{{"style","width:75px;"},{"maxlength","4"}}))
+            @(Html.ValidationMessageFor(model => model.WebViewMaxHeight))
+       </p>
+        
+        <p class="submit" >@(Html.SubmitButton("Save", "Save"))</p>         
+                 @(Html.Message(Model.UIMessage))              
+        </div>
+        
+    } 
+}
+
+@section head { 
+@(Html.Js(new[]{"/Scripts/Controls/jquery.jnotifica.min.js", 
+    "/Scripts/Pages/common.js",
+    "/Scripts/Pages/account/settings.js"}, "/js/usersettings.js"))
+
+    <script language="javascript" type="text/javascript">var message = '@(Model.UIMessage)'; </script> 
+}

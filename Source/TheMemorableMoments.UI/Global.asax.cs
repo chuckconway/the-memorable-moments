@@ -1,9 +1,9 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Autofac;
+using Autofac.Integration.Mvc;
 using Autofac.Integration.Web;
-using Autofac.Integration.Web.Mvc;
+
 using Chucksoft.Core.Web.CacheProviders;
 using TheMemorableMoments.Domain.Model.Albums;
 using TheMemorableMoments.Domain.Model.MediaClasses;
@@ -80,10 +80,8 @@ namespace TheMemorableMoments.UI
         protected void Application_Start()
 // ReSharper restore InconsistentNaming
         {
-            IContainer container = DependencyInjection.Container;
-            _containerProvider = new ContainerProvider(container);
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(DependencyInjection.Container));
 
-            ControllerBuilder.Current.SetControllerFactory(new AutofacControllerFactory(ContainerProvider));
             AreaRegistration.RegisterAllAreas();
             AutoMapperMappings.Initialize();
 

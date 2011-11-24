@@ -1,13 +1,6 @@
-
-@using TheMemorableMoments.UI.Web.Controls
-@using TheMemorableMoments.UI.Web.Helpers
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
-    <title>
-        @ViewBag.Title
-         @RenderSection("mastertitle", required: false)    
+    <title> @ViewBag.Title  @RenderSection("mastertitle", required: false) </title>
     <script type="text/javascript">
         var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
         document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -39,6 +32,8 @@
         });
     });
     </script>
+
+    @RenderSection("head", required: false)
     
 </head>
 
@@ -46,18 +41,19 @@
     <div class="page">
     <div class="siteheader" style="border-bottom:1px dashed #999;padding:5px;height:12px;" >
         <div class="navigation" style="margin-left:auto;margin-right:auto;width:1001px;" >
-        <span style="text-transform:lowercase;" >@RenderSection("pageHeader", required: false)</p>
+        <span style="text-transform:lowercase;" >@RenderSection("pageHeader", required: false)</span>
+                <form >
                     <p><label>Password</label><input id="Password" name="Password" style="width:250px;" maxlength="150" type="password" /></p>                
                     <p><input class="normalwidth" id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /> <label style="display:inline;"  for="rememberMe">Remember me?</label></p>
                 </form>
             </div>
         </div>
     </div>
-    	<div id="body">    	
+    	<div id="body"> 
+        @RenderSection("navigation", required: false)   	
             @RenderSection("MainContent", required: false)
             <div class="clearboth" ></div>
         </div>
-    </div>
     <div id="footer" >copyrighted &#169; 2010 by <a href="http://www.thememorablemoments.com/" title="go to the homepage" >the memorable moments</a>. photos are copyrighted by their respective copyright holders.</div>
 </body>
 </html>

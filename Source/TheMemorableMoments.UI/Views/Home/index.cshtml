@@ -1,0 +1,47 @@
+@model ViewPage<HomeView>
+@using TheMemorableMoments.Domain.Model.MediaClasses
+@using TheMemorableMoments.UI.Models.Views
+
+
+@{ 
+    Layout = "~/Views/Shared/site.cshtml";
+ ViewBag.Title = "LogOff"; 
+}
+
+@section MainContent { 
+    <div class="search">
+@* ReSharper disable Html.PathError *@
+             <form action="/Search" method="get" name="searchForm" > 
+@* ReSharper restore Html.PathError *@
+		        <input  name="text" type="text" maxlength="150"  /> 
+                <input type="submit" class="submit" value="Search" /> 
+	        </form>
+    </div>
+    <div id="randomphotos" >
+         <ul>  
+         
+              @foreach (Media media in Model.Model.Media)
+              {
+                 <li>@Model.Model.GetImageLink(media)</li>
+              }
+            
+           </ul> 
+      </div>
+}
+
+
+@section head { 
+
+     <style type="text/css">
+         @@import url("/Content/css/home/index.css");
+     </style>
+     <script type="text/javascript" src="/Scripts/Pages/home/index.js"/>
+ 
+}
+
+@section pageHeader { 
+ 
+}
+
+@section navigation { 
+ 

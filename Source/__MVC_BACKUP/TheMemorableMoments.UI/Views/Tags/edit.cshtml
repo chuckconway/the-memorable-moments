@@ -1,0 +1,42 @@
+@model TheMemorableMoments.UI.Models.Views.EditTagModel
+@using Microsoft.Web.Mvc
+@using TheMemorableMoments.UI.Web.Helpers
+
+@section MainContent { 
+@using (Html.BeginForm()){
+      <div class="form editphoto">
+        @(Html.ValidationSummary())
+        <p><label>Tag Name</label>@(Html.TextBox("TagText", Model.TagText, new Dictionary<string, object>{{"style", "width:280px;"}})) </p>        
+        <p><label>Description</label>@(Html.TextArea("TagDescription", Model.TagDescription, new Dictionary<string, object>{{"style", "width:280px;height:100px;"}})) </p>
+        @(Html.Hidden("orginalTagText", Model.OrginalTagText))
+        <p class="submit" style="margin-left:10px;" >@(Html.SubmitButton("save", "Save"))</p>        
+        @(Html.Message(Model.UIMessage))
+      </div>
+        } 
+}
+
+@section head { 
+<style type="text/css"> 
+        @import url("/Content/css/common.css");
+    </style> 
+
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+            var message = '@(Model.UIMessage)';
+            showMessage(message);
+
+            //Way Hacky
+            //var message = $('span.albumtitle').val();
+            if (message.length > 0) {
+                $('input#Name').val('');
+                $('textarea#Description').val('');
+            }
+
+        });
+    
+    </script>
+    <style type="text/css"> 
+        div#body {margin:0; width:auto;} 
+    </style> 
+}
