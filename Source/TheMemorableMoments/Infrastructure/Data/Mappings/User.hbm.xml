@@ -1,74 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="User" table="User" lazy="true" >
-    <id name="UserId">
-      <generator class="identity" />
-      <column name="UserId" sql-type="int" not-null="true" />
-    </id>
-    <property name="FirstName">
-      <column name="FirstName" sql-type="nvarchar" not-null="true" />
-    </property>
-    <property name="LastName">
-      <column name="LastName" sql-type="nvarchar" not-null="true" />
-    </property>
-    <property name="Password">
-      <column name="Password" sql-type="nvarchar" not-null="true" />
-    </property>
-    <property name="Email">
-      <column name="Email" sql-type="nvarchar" not-null="true" />
-    </property>
-    <property name="CreateDate">
-      <column name="CreateDate" sql-type="datetime2" not-null="true" />
-    </property>
-    <property name="DisplayName">
-      <column name="DisplayName" sql-type="nvarchar" not-null="false" />
-    </property>
-    <property name="Deleted">
-      <column name="Deleted" sql-type="bit" not-null="true" />
-    </property>
-    <property name="Username">
-      <column name="Username" sql-type="nvarchar" not-null="true" />
-    </property>
-    <property name="LastLogin">
-      <column name="LastLogin" sql-type="datetime2" not-null="false" />
-    </property>
-    <property name="CurrentSession">
-      <column name="CurrentSession" sql-type="datetime2" not-null="false" />
-    </property>
-    <property name="AccountStatus">
-      <column name="AccountStatus" sql-type="nvarchar" not-null="false" />
-    </property>
-    <property name="EnableReceivingOfEmails">
-      <column name="EnableReceivingOfEmails" sql-type="bit" not-null="true" />
-    </property>
-    <property name="WebViewMaxWidth">
-      <column name="WebViewMaxWidth" sql-type="smallint" not-null="true" />
-    </property>
-    <property name="WebViewMaxHeight">
-      <column name="WebViewMaxHeight" sql-type="smallint" not-null="true" />
-    </property>
-    <property name="MaxInvitations">
-      <column name="MaxInvitations" sql-type="tinyint" not-null="true" />
-    </property>
-    <bag name="Albums" inverse="true" cascade="none">
-      <key column="UserId" />
-      <one-to-many class="Album" />
-    </bag>
-    <bag name="Friends" inverse="true" cascade="none">
-      <key column="FriendId" />
-      <one-to-many class="Friend" />
-    </bag>
-    <bag name="Friends" inverse="true" cascade="none">
-      <key column="UserId" />
-      <one-to-many class="Friend" />
-    </bag>
-    <bag name="Invitations" inverse="true" cascade="none">
-      <key column="UserId" />
-      <one-to-many class="Invitation" />
-    </bag>
-    <bag name="Vieweds" inverse="true" cascade="none">
-      <key column="UserId" />
-      <one-to-many class="Viewed" />
-    </bag>
+  <class name="User" table="User" mutable="true">
+    <id name="UserId"  type="int" />
+    <property name="FirstName" length="100" not-null="true" />    
+    <property name="LastName" length="100" not-null="true" />
+    <property name="Password" length="250" not-null="true" />
+    <property name="Email" length="250" not-null="true" />
+    <property name="DisplayName" length="100" not-null="false" />
+    <property name="Username" length="50" not-null="true" />
+    <property name="Deleted"  not-null="true" />
+    <property name="AccountStatus" length="50" not-null="false"/>
+    <property name="LastLogin"  not-null="false" type="datetime2"/>
+    <property name="CurrentSession"  not-null="false" />
+    <property name="EnableReceivingOfEmails"  not-null="true" />
+    <property name="WebViewMaxWidth"  not-null="true" />
+    <property name="WebViewMaxHeight"  not-null="true" />
+    <property name="MaxInvitations"  not-null="true" />
   </class>
 </hibernate-mapping>

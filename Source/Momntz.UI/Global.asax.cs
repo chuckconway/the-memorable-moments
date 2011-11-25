@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.DynamicData;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Momntz.UI.Web.Injection;
 
 namespace Momntz.UI
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
 
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
         }
 
+        /// <summary>
+        /// Registers the routes.
+        /// </summary>
+        /// <param name="routes">The routes.</param>
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             
+
 
             routes.MapRoute(
                 "home", // Route name
@@ -31,12 +33,30 @@ namespace Momntz.UI
 
         }
 
+        /// <summary>
+        /// Application_s the start.
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            InitializeContainer();
+        }
+
+        protected void Application_EndRequest()
+        {
+            // Make sure to dispose of NHibernate session if created on this web request
+            IoC.ReleaseAndDisposeAllHttpScopedObjects();
+        }
+
+        /// <summary>
+        /// Initializes the container.
+        /// </summary>
+        public void InitializeContainer()
+        {
+            var container = IoC.Initialize();
+            DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
         }
     }
 }

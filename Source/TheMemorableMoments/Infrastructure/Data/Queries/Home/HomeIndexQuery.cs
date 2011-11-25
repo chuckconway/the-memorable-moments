@@ -1,26 +1,33 @@
-﻿using System;
-using ChuckConway.Cqrs.Infrastructure;
+﻿using NHibernate;
+using TheMemorableMoments.Infrastructure.Data.DTOs;
 using TheMemorableMoments.Infrastructure.Projections;
 
 namespace TheMemorableMoments.Infrastructure.Data.Queries.Home
 {
     public class HomeIndexQuery : IQuery<HomeIndexProjection>
     {
-        private readonly IRepository _repository;
+        private readonly ISession _session;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HomeIndexQuery"/> class.
         /// </summary>
-        /// <param name="repository">The repository.</param>
-        public HomeIndexQuery(IRepository repository)
+        /// <param name="session">The session.</param>
+        public HomeIndexQuery(ISession session)
         {
-            _repository = repository;
+            _session = session;
         }
 
+        /// <summary>
+        /// Retrieves the specified values.
+        /// </summary>
+        /// <param name="values">The values.</param>
+        /// <returns></returns>
         public HomeIndexProjection Retrieve(dynamic values)
         {
-            //_repository.Get<>()
-            return new HomeIndexProjection();
+           var items = _session.QueryOver<Media>()
+                .Take(90)
+                .List<Media>();
+            return new HomeIndexProjection() {Media = items};
         }
     }
 }

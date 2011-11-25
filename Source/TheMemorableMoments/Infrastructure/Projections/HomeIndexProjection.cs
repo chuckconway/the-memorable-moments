@@ -5,6 +5,6 @@ namespace TheMemorableMoments.Infrastructure.Projections
 {
     public class HomeIndexProjection
     {
-        public List<Media> Media { get; set; }
+        public IList<Media> Media { get; set; }
     }
 }

@@ -65,8 +65,8 @@
     <AssemblyOriginatorKeyFile>..\TheMemorableMoments.UI\SN.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChuckConway.Cqrs">
-      <HintPath>..\..\ThirdParty\ChuckConway\ChuckConway.Cqrs.dll</HintPath>
+    <Reference Include="ChuckConway.nHibernate">
+      <HintPath>..\..\ThirdParty\ChuckConway\ChuckConway.nHibernate.dll</HintPath>
     </Reference>
     <Reference Include="Chucksoft.Core">
       <HintPath>..\..\ThirdParty\Chucksoft\Chucksoft.Core.dll</HintPath>
@@ -80,14 +80,8 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\ThirdParty\nHibernate\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="LinFu.DynamicProxy">
-      <HintPath>..\..\ThirdParty\nHibernate\LinFu.DynamicProxy.dll</HintPath>
-    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate.ByteCode.LinFu">
-      <HintPath>..\..\ThirdParty\nHibernate\NHibernate.ByteCode.LinFu.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -275,32 +269,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Album.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\AlbumMedium.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Comment.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Configuration.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Exif.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\File.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Friend.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Group.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\GroupUser.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Invitation.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Location.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaFile.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaLedger.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaQueue.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaUploadBatch.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\MediaViewed.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Medium.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\PersistentCollection.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\RecentActivity.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Tag.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\TagMedium.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Token.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\UploadBatch.hbm.xml" />
     <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Viewed.hbm.xml" />
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\WaitingList.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\Data\Mappings\Media.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
