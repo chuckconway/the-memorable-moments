@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="Momntz"  namespace="Momntz.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Facet" table="Facet"  lazy="true">
+    <id name="Id" column="Id"  type="int" >
+      <generator class="identity"/>
+    </id>
+    <property name="Name" length="250" not-null="true" />
+    <property name="Value" length="250" not-null="true" />
+    <many-to-one name="Item" class="Item" column="ItemId" fetch="join"  />
+  </class>
+</hibernate-mapping>

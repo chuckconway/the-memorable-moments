@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Medium" table="Media" lazy="true" >
+    <id name="MediaId">
+      <generator class="identity" />
+      <column name="MediaId" sql-type="int" not-null="true" />
+    </id>
+    <property name="UserId">
+      <column name="UserId" sql-type="int" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="CreateDate">
+      <column name="CreateDate" sql-type="datetime2" not-null="true" />
+    </property>
+    <property name="UploadStatus">
+      <column name="UploadStatus" sql-type="nvarchar" not-null="true" />
+    </property>
+    <bag name="AlbumMedias" inverse="true" cascade="none">
+      <key column="MediaId" />
+      <one-to-many class="AlbumMedium" />
+    </bag>
+    <bag name="Comments" inverse="true" cascade="none">
+      <key column="MediaId" />
+      <one-to-many class="Comment" />
+    </bag>
+    <bag name="Exifs" inverse="true" cascade="none">
+      <key column="MediaId" />
+      <one-to-many class="Exif" />
+    </bag>
+    <bag name="MediaFiles" inverse="true" cascade="none">
+      <key column="MediaId" />
+      <one-to-many class="MediaFile" />
+    </bag>
+    <bag name="TagMedias" inverse="true" cascade="none">
+      <key column="MediaId" />
+      <one-to-many class="TagMedium" />
+    </bag>
+    <bag name="Vieweds" inverse="true" cascade="none">
+      <key column="MediaId" />
+      <one-to-many class="Viewed" />
+    </bag>
+  </class>
+</hibernate-mapping>

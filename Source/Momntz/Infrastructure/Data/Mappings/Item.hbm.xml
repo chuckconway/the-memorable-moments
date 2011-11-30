@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="Momntz"  namespace="Momntz.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Item" table="Item"  lazy="true">
+    <id name="Id" column="Id"  type="int" >
+      <generator class="identity"/>
+    </id>    
+    <property name="Name" length="255" not-null="true" />
+    <property name="Extension" length="10" not-null="true" />
+    <property name="OriginalName" length="255" not-null="true" />
+    <many-to-one name="Momento" class="Momento" column="MomentoId" fetch="join" />
+    <set name="Facets" table="Facet" cascade="save-update" >
+      <key column="ItemId"/>
+      <one-to-many class="Facet" not-found="ignore" />
+    </set>
+  </class>
+</hibernate-mapping>

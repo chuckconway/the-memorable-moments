@@ -22,9 +22,6 @@ namespace Momntz.UI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            
-
-
             routes.MapRoute(
                 "home", // Route name
                 string.Empty, // URL with parameters
@@ -42,6 +39,12 @@ namespace Momntz.UI
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
             InitializeContainer();
+            IntegrateWithNHProf();
+        }
+
+        private void IntegrateWithNHProf()
+        {
+            HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
         }
 
         protected void Application_EndRequest()

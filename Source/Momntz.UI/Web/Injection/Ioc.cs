@@ -1,8 +1,6 @@
 ﻿using System.Web.Mvc;
-using NHibernate;
-using NHibernate.Cfg;
+using Momntz.Infrastructure.Data.Queries;
 using StructureMap;
-using TheMemorableMoments.Infrastructure.Data.Queries;
 
 namespace Momntz.UI.Web.Injection
 {
@@ -25,10 +23,8 @@ namespace Momntz.UI.Web.Injection
                                              x.Scan(scan =>
                                                         {
                                                             scan.TheCallingAssembly();
-                                                            scan.Assembly("TheMemorableMoments");
                                                             scan.WithDefaultConventions();
                                                             scan.AddAllTypesOf<IController>();
-                                                            scan.AddAllTypesOf(typeof (IQuery<>));
                                                         });
                                          });
             

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="TheMemorableMoments"  namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Attribute" table="ItemAttribute"  lazy="true">
+    <id name="Id" column="Id"  type="int" >
+      <generator class="identity"/>
+    </id>
+    <property name="Name" length="250" not-null="true" />
+    <property name="Value" length="250" not-null="true" />
+  </class>
+</hibernate-mapping>

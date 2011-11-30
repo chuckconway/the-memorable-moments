@@ -83,6 +83,21 @@
     <Reference Include="NHibernate">
       <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="Ploeh.AutoFixture">
+      <HintPath>..\..\ThirdParty\AutoFixture\Ploeh.AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture.AutoMoq">
+      <HintPath>..\..\ThirdParty\AutoFixture\Ploeh.AutoFixture.AutoMoq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture.AutoRhinoMock">
+      <HintPath>..\..\ThirdParty\AutoFixture\Ploeh.AutoFixture.AutoRhinoMock.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture.Idioms">
+      <HintPath>..\..\ThirdParty\AutoFixture\Ploeh.AutoFixture.Idioms.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.SemanticComparison">
+      <HintPath>..\..\ThirdParty\AutoFixture\Ploeh.SemanticComparison.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -159,32 +174,10 @@
     <Compile Include="Domain\Services\MediaFileService.cs" />
     <Compile Include="Domain\Services\QueueFileService.cs" />
     <Compile Include="Domain\Services\ResizerService.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Album.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\AlbumMedium.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Comment.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Configuration.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Exif.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\File.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Friend.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Group.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\GroupUser.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Invitation.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Location.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\MediaFile.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Attribute.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Item.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Media.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\MediaQueue.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\MediaUploadBatch.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\MediaViewed.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Medium.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\PersistentCollection.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\RecentActivity.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Tag.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\TagMedium.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Token.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\UploadBatch.cs" />
     <Compile Include="Infrastructure\Data\DTOs\User.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Viewed.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\WaitingList.cs" />
     <Compile Include="Infrastructure\Data\Queries\Home\HomeIndexQuery.cs" />
     <Compile Include="Infrastructure\Data\Queries\IQuery.cs" />
     <Compile Include="Infrastructure\Projections\HomeIndexProjection.cs" />
@@ -259,8 +252,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CommandHandlers\" />
-    <Folder Include="Commands\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
@@ -272,7 +263,15 @@
     <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Infrastructure\Data\Mappings\Media.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Media.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\ItemAttribute.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Infrastructure\Data\Mappings\Item.hbm.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

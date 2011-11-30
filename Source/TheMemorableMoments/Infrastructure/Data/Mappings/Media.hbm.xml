@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping assembly="Global.Core.Data" namespace="Global.Core.Data" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="Media" table="MediaView" mutable="true">
-    <id name="MediaId" type="int" />
-    <many-to-one name="User" column="UserId" />
-    <property name="Title" length="100"  not-null="true" type="nvarchar"/>
-    <property name="Description" length="2000"  not-null="false" type="nvarchar"/>
-    <property name="Tags" not-null="false" type="nvarchar"/>
-    <property name="Status" length="50" not-null="true" type="nvarchar"/>
-    <property name="MediaDay" not-null="false" type="int"/>
-    <property name="MediaYear" not-null="false" type="int"/>
-    <property name="MediaMonth" not-null="false" type="int"/>
-    <property name="CommentCount" not-null="false" type="int"/>
+<hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Media" table="MediaView" lazy="true">
+    <id name="Id" column="MediaId" type="int" >
+      <generator class="identity"/>
+    </id>
+    <many-to-one name="User" column="UserId" fetch="join" />
+    <property name="Title" length="100"  not-null="true"/>
+    <property name="Description" length="2000"  not-null="false"/>
+    <property name="Tags" not-null="false"/>
+    <property name="Status" />
+    <property name="MediaDay" not-null="false" />
+    <property name="MediaYear" not-null="false" />
+    <property name="MediaMonth" not-null="false" />
+    <property name="CommentCount" not-null="false" />
    </class>
 </hibernate-mapping>

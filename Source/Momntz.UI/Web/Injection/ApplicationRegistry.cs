@@ -1,4 +1,5 @@
-﻿using NHibernate;
+﻿using Momntz.Infrastructure.Data.Queries;
+using NHibernate;
 using NHibernate.Cfg;
 using StructureMap.Configuration.DSL;
 
@@ -29,7 +30,11 @@ namespace Momntz.UI.Web.Injection
         /// <returns></returns>
         private static ISessionFactory CreateSessionFactory()
         {
-            return new Configuration().Configure().BuildSessionFactory();
+            var configuration = new Configuration();
+            configuration = configuration.Configure();
+            configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
+
+            return  configuration.BuildSessionFactory();
         }
     }
 }

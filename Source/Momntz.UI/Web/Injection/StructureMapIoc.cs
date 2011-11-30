@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Momntz.UI.Web.Injection
+﻿namespace Momntz.UI.Web.Injection
 {
     public class StructureMapIoc : IInjection
     {

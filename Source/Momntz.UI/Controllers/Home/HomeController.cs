@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Momntz.Infrastructure.Projections;
 using Momntz.UI.Web;
-using Momntz.UI.Web.Injection;
-using TheMemorableMoments.Infrastructure.Projections;
 
 namespace Momntz.UI.Controllers.Home
 {

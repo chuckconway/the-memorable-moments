@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PersistentCollection" table="PersistentCollection" lazy="true" >
+    <id name="CollectionKey">
+      <generator class="identity" />
+      <column name="CollectionKey" sql-type="nvarchar" not-null="true" />
+    </id>
+    <property name="Value">
+      <column name="Value" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Persistence">
+      <column name="Persistence" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="CreateDate">
+      <column name="CreateDate" sql-type="datetime2" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

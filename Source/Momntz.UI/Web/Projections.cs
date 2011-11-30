@@ -1,5 +1,5 @@
-﻿using Momntz.UI.Web.Injection;
-using TheMemorableMoments.Infrastructure.Data.Queries;
+﻿using Momntz.Infrastructure.Data.Queries;
+using Momntz.UI.Web.Injection;
 
 namespace Momntz.UI.Web
 {

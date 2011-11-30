@@ -34,13 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HibernatingRhinos.Profiler.Appender">
+      <HintPath>..\..\..\..\Users\Chuck\Downloads\NHibernate.Profiler-Build-895\HibernatingRhinos.Profiler.Appender.dll</HintPath>
+    </Reference>
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\nHibernate\Iesi.Collections.dll</HintPath>
-    </Reference>
-    <Reference Include="LinFu.DynamicProxy, Version=1.0.4.18998, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ThirdParty\nHibernate\LinFu.DynamicProxy.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -118,9 +117,9 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments\TheMemorableMoments.csproj">
-      <Project>{12BB4292-D205-45F7-98AA-A24FD11705F3}</Project>
-      <Name>TheMemorableMoments</Name>
+    <ProjectReference Include="..\Momntz\Momntz.csproj">
+      <Project>{66EBD27E-70EE-49DF-B062-B5E3C02A8736}</Project>
+      <Name>Momntz</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
