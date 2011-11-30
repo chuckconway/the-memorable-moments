@@ -260,13 +260,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Infrastructure\Data\Mappings\Media.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\ItemAttribute.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\ItemAttribute.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Infrastructure\Data\Mappings\Item.hbm.xml">

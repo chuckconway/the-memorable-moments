@@ -63,6 +63,14 @@ namespace Momntz.Infrastructure.Data.DTOs
         public virtual int? Day { get; set; }
 
         /// <summary>
+        /// Gets or sets the tags.
+        /// </summary>
+        /// <value>
+        /// The tags.
+        /// </value>
+        public virtual ICollection<Tag> Tags { get; set; } 
+
+        /// <summary>
         /// Gets or sets the items.
         /// </summary>
         /// <value>

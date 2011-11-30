@@ -1,4 +1,6 @@
-﻿namespace Momntz.UI.Web.Injection
+﻿using System.Web.Mvc;
+
+namespace Momntz.UI.Web.Injection
 {
     public class StructureMapIoc : IInjection
     {
@@ -9,7 +11,7 @@
         /// <returns></returns>
         public T Get<T>()
         {
-            return IoC.Container.GetInstance<T>();
+            return DependencyResolver.Current.GetService<T>();
         }
     }
 }

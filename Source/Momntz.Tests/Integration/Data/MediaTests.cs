@@ -15,7 +15,7 @@ namespace Momntz.Tests.Integration.Data
             //Arrange
             var fixture = new Fixture();
             var user = fixture.CreateAnonymous(new User() { Id = 0 });
-            var momento = new Momento { Id = 0, User = user, Name = "Chuckj was here", Visibility = Visibility.Public};
+            var momento = new Momento { Id = 0, User = user, Name = "Chuckj was here", Visibility = Visibility.Public, Tags = new List<Tag>{new Tag {Id = 0, Name = "chuck-conway", Type = "Tag"}}};
 
             var item = new Item { Id = 0, Momento = momento, Name = "Thumbnail", OriginalName = "Chuck1", Extension = ".pdf"};
             momento.Items = new List<Item> { item };

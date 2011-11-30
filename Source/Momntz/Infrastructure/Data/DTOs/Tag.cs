@@ -1,14 +1,42 @@
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace TheMemorableMoments.Infrastructure.Data.DTOs {
-    
-    public class Tag {
-        public Tag() {
-			TagMedia = new List<TagMedium>();
-        }
-        public virtual int TagId { get; set; }
-        public virtual List<TagMedium> TagMedia { get; set; }
-        public virtual string TagName { get; set; }
+namespace Momntz.Infrastructure.Data.DTOs
+{
+    public class Tag
+    {
+        /// <summary>
+        /// Gets or sets the id.
+        /// </summary>
+        /// <value>
+        /// The id.
+        /// </value>
+        public virtual int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
+        public virtual string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the description.
+        /// </summary>
+        /// <value>
+        /// The description.
+        /// </value>
         public virtual string Description { get; set; }
+
+        /// <summary>
+        /// Gets or sets the type.
+        /// </summary>
+        /// <value>
+        /// The type.
+        /// </value>
+        public virtual string Type { get; set; }
     }
 }

@@ -1,19 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<hibernate-mapping assembly="TheMemorableMoments" namespace="TheMemorableMoments.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="Tag" table="Tag" lazy="true" >
-    <id name="TagId">
-      <generator class="identity" />
-      <column name="TagId" sql-type="int" not-null="true" />
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="Momntz"  namespace="Momntz.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Tag" table="Tag"  lazy="true">
+    <id name="Id" column="Id"  type="int" >
+      <generator class="identity"/>
     </id>
-    <property name="TagName">
-      <column name="TagName" sql-type="nvarchar" not-null="true" />
-    </property>
-    <property name="Description">
-      <column name="Description" sql-type="nvarchar" not-null="false" />
-    </property>
-    <bag name="TagMedias" inverse="true" cascade="none">
-      <key column="TagId" />
-      <one-to-many class="TagMedium" />
-    </bag>
+    <property name="Name" length="100" not-null="true" />
+    <property name="Description" length="4000" not-null="false" />
+    <property name="Type" length="50" not-null="true" />
   </class>
 </hibernate-mapping>

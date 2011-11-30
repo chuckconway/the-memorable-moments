@@ -15,5 +15,9 @@
     <property name="Day" column="[Day]" not-null="false" />
     <property name="Year" column="[Year]" not-null="false" />
     <property name="Month" column="[Month]" not-null="false" />
+    <set name="Tags" table="TagMomento" cascade="save-update" lazy="false">
+      <key column="MomentoId" />
+      <many-to-many class="Tag" column="TagId" />      
+    </set>
    </class>
 </hibernate-mapping>

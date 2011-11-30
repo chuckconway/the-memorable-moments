@@ -22,9 +22,11 @@ namespace Momntz.UI.Web.Injection
                                              x.AddRegistry(new ApplicationRegistry());
                                              x.Scan(scan =>
                                                         {
-                                                            scan.TheCallingAssembly();
                                                             scan.WithDefaultConventions();
+                                                            scan.TheCallingAssembly();
                                                             scan.AddAllTypesOf<IController>();
+                                                            scan.AssemblyContainingType(typeof (IQuery<>));
+                                                            scan.AddAllTypesOf(typeof (IQuery<>));
                                                         });
                                          });
             

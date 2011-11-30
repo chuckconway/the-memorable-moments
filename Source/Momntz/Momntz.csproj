@@ -50,6 +50,7 @@
     <Compile Include="Infrastructure\Data\DTOs\Item.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Media.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Momento.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Tag.cs" />
     <Compile Include="Infrastructure\Data\DTOs\User.cs" />
     <Compile Include="Infrastructure\Data\Queries\Home\HomeIndexQuery.cs" />
     <Compile Include="Infrastructure\Data\Queries\IQuery.cs" />
@@ -60,7 +61,9 @@
     <EmbeddedResource Include="Infrastructure\Data\Mappings\Item.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml" />
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\Data\Mappings\Momento.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -69,6 +72,9 @@
   <ItemGroup>
     <Folder Include="CommandHandlers\" />
     <Folder Include="Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Tag.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
