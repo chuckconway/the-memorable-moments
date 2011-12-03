@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Momntz.CommandHandlers;
 using Momntz.Infrastructure.Data.Queries;
 using StructureMap;
 
@@ -27,6 +28,7 @@ namespace Momntz.UI.Web.Injection
                                                             scan.AddAllTypesOf<IController>();
                                                             scan.AssemblyContainingType(typeof (IQuery<>));
                                                             scan.AddAllTypesOf(typeof (IQuery<>));
+                                                            scan.AddAllTypesOf(typeof(ICommandHandler<>));
                                                         });
                                          });
             

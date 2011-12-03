@@ -78,7 +78,6 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\Injection\ApplicationRegistry.cs" />
-    <Compile Include="Web\Injection\IInjection.cs" />
     <Compile Include="Web\Injection\Ioc.cs" />
     <Compile Include="Web\Injection\StructureMapDependencyResolver.cs" />
     <Compile Include="Web\Injection\StructureMapIoc.cs" />

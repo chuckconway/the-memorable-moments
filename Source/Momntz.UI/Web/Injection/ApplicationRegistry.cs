@@ -1,4 +1,5 @@
-﻿using Momntz.Infrastructure.Data.Queries;
+﻿using Momntz.Infrastructure;
+using Momntz.Infrastructure.Data.Queries;
 using NHibernate;
 using NHibernate.Cfg;
 using StructureMap.Configuration.DSL;
@@ -22,6 +23,7 @@ namespace Momntz.UI.Web.Injection
 
             For<IInjection>().Use<StructureMapIoc>();
             For<IProjections>().Use<Projections>();
+            For<ICommandProcessor>().Use<CommandProcessor>();
         }
 
         /// <summary>

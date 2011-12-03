@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlers\ICommandHandler.cs" />
+    <Compile Include="Commands\HomeIndexCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Infrastructure\CommandProcessor.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Facet.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Item.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Media.cs" />
@@ -54,6 +58,8 @@
     <Compile Include="Infrastructure\Data\DTOs\User.cs" />
     <Compile Include="Infrastructure\Data\Queries\Home\HomeIndexQuery.cs" />
     <Compile Include="Infrastructure\Data\Queries\IQuery.cs" />
+    <Compile Include="Infrastructure\ICommandProcessor.cs" />
+    <Compile Include="Infrastructure\IInjection.cs" />
     <Compile Include="Infrastructure\Projections\HomeIndexProjection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -69,10 +75,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Infrastructure\Data\Mappings\Facet.hbm.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CommandHandlers\" />
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Infrastructure\Data\Mappings\Tag.hbm.xml" />
   </ItemGroup>

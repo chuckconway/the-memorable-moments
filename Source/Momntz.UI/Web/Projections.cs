@@ -1,4 +1,5 @@
-﻿using Momntz.Infrastructure.Data.Queries;
+﻿using Momntz.Infrastructure;
+using Momntz.Infrastructure.Data.Queries;
 using Momntz.UI.Web.Injection;
 
 namespace Momntz.UI.Web
