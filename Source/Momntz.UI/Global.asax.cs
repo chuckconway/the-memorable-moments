@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using Momntz.UI.Web.Injection;
+using Raven.Client.Document;
 
 namespace Momntz.UI
 {

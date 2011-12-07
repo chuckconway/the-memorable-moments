@@ -1,6 +1,9 @@
 ﻿using System.Web.Mvc;
 using Momntz.CommandHandlers;
 using Momntz.Infrastructure.Data.Queries;
+using NServiceBus;
+using NServiceBus.Serializers.XML;
+using NServiceBus.Unicast.Transport;
 using StructureMap;
 
 namespace Momntz.UI.Web.Injection
@@ -21,8 +24,12 @@ namespace Momntz.UI.Web.Injection
             ObjectFactory.Initialize(x =>
                                          {
                                              x.AddRegistry(new ApplicationRegistry());
+                                             //x.For<IStartableBus>().Use<Startable>();
                                              x.Scan(scan =>
                                                         {
+                                                            //scan.AssemblyContainingType(typeof(IStartableBus));
+                                                            //scan.AssemblyContainingType(typeof(ITransport));
+                                                            //scan.AssemblyContainingType(typeof(MessageSerializer));
                                                             scan.WithDefaultConventions();
                                                             scan.TheCallingAssembly();
                                                             scan.AddAllTypesOf<IController>();
@@ -31,9 +38,34 @@ namespace Momntz.UI.Web.Injection
                                                             scan.AddAllTypesOf(typeof(ICommandHandler<>));
                                                         });
                                          });
+
+
             
             Container = ObjectFactory.Container;
+            RegisterNServiceBus();
+
             return Container;
+        }
+
+        /// <summary>
+        /// Gets the service bus.
+        /// </summary>
+        /// <returns></returns>
+        private static void RegisterNServiceBus()
+        {
+                Configure
+                .WithWeb()
+                .Log4Net()
+                .StructureMapBuilder(ObjectFactory.Container)
+                .XmlSerializer()
+                .MsmqTransport()
+                .IsTransactional(true)
+                .PurgeOnStartup(false)
+                .UnicastBus()
+                .ImpersonateSender(false)
+                .CreateBus()
+                .Start();
+
         }
 
         /// <summary>

@@ -1,7 +1,10 @@
 ﻿using Momntz.Infrastructure;
+using Momntz.Infrastructure.Data.Command;
 using Momntz.Infrastructure.Data.Queries;
 using NHibernate;
 using NHibernate.Cfg;
+using Raven.Client;
+using Raven.Client.Document;
 using StructureMap.Configuration.DSL;
 
 namespace Momntz.UI.Web.Injection
@@ -24,6 +27,16 @@ namespace Momntz.UI.Web.Injection
             For<IInjection>().Use<StructureMapIoc>();
             For<IProjections>().Use<Projections>();
             For<ICommandProcessor>().Use<CommandProcessor>();
+
+            For<IDocumentDatabase>().Use<Infrastructure.Data.Command.Raven>();
+            For<IDocumentStore>().Use(GetRavenDb());
+
+        }
+
+        private static IDocumentStore GetRavenDb()
+        {
+            var documentStore = new DocumentStore { Url = "http://localhost:8080" };
+            return documentStore.Initialize();
         }
 
         /// <summary>
@@ -34,7 +47,7 @@ namespace Momntz.UI.Web.Injection
         {
             var configuration = new Configuration();
             configuration = configuration.Configure();
-            configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
+            //configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
 
             return  configuration.BuildSessionFactory();
         }

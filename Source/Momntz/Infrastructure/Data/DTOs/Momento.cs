@@ -84,19 +84,7 @@ namespace Momntz.Infrastructure.Data.DTOs
         /// <value>
         /// The visibility.
         /// </value>
-        public virtual Visibility Visibility
-        {
-            get { return (Visibility)Enum.Parse(typeof(Visibility), Status); }
-            set { Status = value.ToString(); }
-        }
-
-        /// <summary>
-        /// Gets or sets the status.
-        /// </summary>
-        /// <value>
-        /// The status.
-        /// </value>
-        public virtual string Status { get; set; }
+        public virtual Visibility Visibility { get; set; }
 
         /// <summary>
         /// Gets or sets the user.

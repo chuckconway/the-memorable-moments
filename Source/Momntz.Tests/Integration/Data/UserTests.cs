@@ -14,7 +14,7 @@ namespace Momntz.Tests.Integration.Data
             //Arrange
             Fixture fixture = new Fixture();
             var user = fixture.CreateAnonymous<User>();
-            user.Id = 0; //reset the value to zero so nHibernate will do an insert.
+           // user.Id = 0; //reset the value to zero so nHibernate will do an insert.
 
 
             //Act

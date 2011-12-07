@@ -27,20 +27,20 @@ namespace Momntz.UI.Controllers.Home
         /// Indexes this instance.
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        public ActionResult Index()
-        {
-            var projection = _projections.Get<HomeIndexProjection>();
-            return View(projection);
-        }
+        
+        //public ActionResult Index()
+        //{
+        //    var projection = _projections.Get<HomeIndexProjection>();
+        //    return View(projection);
+        //}
 
         /// <summary>
         /// Indexes the specified id.
         /// </summary>
         /// <param name="id">The id.</param>
         /// <returns></returns>
-        [HttpPost]
-        public ActionResult Index(int id)
+        [HttpGet]
+        public ActionResult Index()
         {
             HomeIndexCommand command = new HomeIndexCommand(Guid.NewGuid());
             _commandProcessor.Process(command);
