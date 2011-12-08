@@ -46,14 +46,6 @@ namespace Momntz.Infrastructure.Data.DTOs {
         public string Email { get; set; }
 
         /// <summary>
-        /// Gets or sets the display name.
-        /// </summary>
-        /// <value>
-        /// The display name.
-        /// </value>
-        public string DisplayName { get; set; }
-
-        /// <summary>
         /// Gets or sets a value indicating whether this <see cref="User"/> is deleted.
         /// </summary>
         /// <value>
@@ -91,7 +83,7 @@ namespace Momntz.Infrastructure.Data.DTOs {
         /// <value>
         /// The account status.
         /// </value>
-        public string AccountStatus { get; set; }
+        public UserAccountStatus AccountStatus { get; set; }
 
         /// <summary>
         /// Gets or sets the preferences.
@@ -100,6 +92,12 @@ namespace Momntz.Infrastructure.Data.DTOs {
         /// The preferences.
         /// </value>
         public List<KeyValuePair<Preferences, string>> Preferences { get; set; }
+    }
+
+    public enum UserAccountStatus
+    {
+        Active,
+        Inactive
     }
 
     public enum Preferences

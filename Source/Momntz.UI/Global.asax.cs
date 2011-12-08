@@ -23,11 +23,8 @@ namespace Momntz.UI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
-                "home", // Route name
-                string.Empty, // URL with parameters
-                new { controller = "Home", action = "Index",  } // Parameter defaults
-            );
+            routes.MapRoute("signup", "signup/{action}", new { controller = "signup", action = "Index", });
+            routes.MapRoute("home", string.Empty, new { controller = "Home", action = "Index",  });
 
         }
 

@@ -52,8 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandHandlers\CreateUserCommandHandler.cs" />
     <Compile Include="CommandHandlers\HomeIndexCommandHandler.cs" />
     <Compile Include="CommandHandlers\ICommandHandler.cs" />
+    <Compile Include="Commands\CreateUserCommand.cs" />
     <Compile Include="Commands\HomeIndexCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Infrastructure\CommandProcessor.cs" />

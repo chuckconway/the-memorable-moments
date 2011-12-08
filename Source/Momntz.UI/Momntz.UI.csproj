@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Chucksoft.Core">
+      <HintPath>..\..\ThirdParty\Chucksoft\3.0\Chucksoft.Core.dll</HintPath>
+    </Reference>
     <Reference Include="HibernatingRhinos.Profiler.Appender">
       <HintPath>..\..\..\..\Users\Chuck\Downloads\NHibernate.Profiler-Build-895\HibernatingRhinos.Profiler.Appender.dll</HintPath>
     </Reference>
@@ -43,6 +46,12 @@
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\..\ThirdParty\nServiceBus\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib">
+      <HintPath>..\..\ThirdParty\MvcContrib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcContrib.FluentHtml">
+      <HintPath>..\..\ThirdParty\MvcContrib\MvcContrib.FluentHtml.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\..\..\Raven\Client\Newtonsoft.Json.dll</HintPath>
@@ -95,10 +104,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Home\HomeController.cs" />
+    <Compile Include="Controllers\Signup\SignupController.cs" />
+    <Compile Include="Models\Signup\SignupView.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\ActionResults\FormActionResult.cs" />
+    <Compile Include="Web\ActionResults\XmlActionResult.cs" />
+    <Compile Include="Web\Controllers\UnathenticatedController.cs" />
+    <Compile Include="Web\Forms\IFormHandler.cs" />
+    <Compile Include="Web\Forms\SignupHandler.cs" />
     <Compile Include="Web\Injection\ApplicationRegistry.cs" />
     <Compile Include="Web\Injection\Ioc.cs" />
     <Compile Include="Web\Injection\Startable.cs" />
@@ -108,6 +124,7 @@
     <Compile Include="Web\Projections.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\Signup\index.css" />
     <Content Include="Content\CSS\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\Frameworks\jQuery\jquery.1.7.1.js" />
@@ -130,8 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\CSS\Home\" />
-    <Folder Include="Controllers\Signup\" />
-    <Folder Include="Models\" />
     <Folder Include="Scripts\Views\Home\" />
   </ItemGroup>
   <ItemGroup>

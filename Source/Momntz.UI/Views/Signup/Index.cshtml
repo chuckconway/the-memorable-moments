@@ -1,5 +1,53 @@
-﻿@{
+﻿@using MvcContrib.FluentHtml
+@model Momntz.UI.Models.Signup.SignupView
+@{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@section scripts {
+
+<link href="@Url.Content("~/Content/CSS/Signup/index.css")" rel="stylesheet" type="text/css" />
+
+}
+
+@section MainContent {
+
+<h2>Sign up</h2>
+
+@using(Html.BeginForm()){
+
+<p>
+    <label>First Name</label>
+    @Html.TextBoxFor(s => s.FirstName)
+</p>
+
+<p>
+    <label>Last Name</label>
+    @Html.TextBoxFor(s => s.LastName)
+</p>
+
+<p>
+    <label>Username</label>
+    @Html.TextBoxFor(s => s.Username)
+</p>
+
+<p>
+    <label>Email</label>
+    @Html.TextBoxFor(s => s.Email)
+</p>
+
+<p>
+    <label>Password</label>
+    @Html.TextBoxFor(s => s.Password)
+</p>
+
+<p>
+    <label>Confirm</label>
+    @Html.TextBoxFor(s => s.Confirm)
+</p>
+
+@this.SubmitButton("Join")
+
+    }
+
+}
