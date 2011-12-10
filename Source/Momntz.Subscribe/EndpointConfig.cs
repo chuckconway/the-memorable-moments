@@ -1,4 +1,7 @@
-﻿using Momntz.PubSub.Messages;
+﻿using Momntz.Infrastructure.Data;
+using Momntz.Infrastructure.Data.Queries;
+using Momntz.PubSub.Messages;
+using NHibernate;
 using NServiceBus;
 using StructureMap;
 
@@ -19,6 +22,24 @@ namespace Momntz.Subscribe
         /// </summary>
         public void Init()
         {
+            ObjectFactory.Initialize(x =>
+            {
+                x.For<IMomntzSessionFactories>()
+                    .Singleton()
+                    .Use<DatabaseFactories>();
+
+                x.For<ISession>()
+               .Use(context => context.GetInstance<ISessionFactory>().OpenSession());
+
+                //x.AddRegistry(new ApplicationRegistry());
+                //x.For<IStartableBus>().Use<Startable>();
+                x.Scan(scan =>
+                {
+                    scan.AssemblyContainingType(typeof(IQuery<>));
+
+                });
+            });
+
             Configure.With()
             .StructureMapBuilder(ObjectFactory.Container)
             .XmlSerializer()

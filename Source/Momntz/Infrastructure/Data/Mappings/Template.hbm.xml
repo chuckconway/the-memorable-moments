@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="Momntz"  namespace="Momntz.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Template" table="Template"  lazy="true">
+    <id name="Name"  />
+    <property name="Body" not-null="true" />
+    <property name="Title" not-null="true" />
+  </class>
+</hibernate-mapping>

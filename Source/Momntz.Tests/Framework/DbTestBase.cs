@@ -1,8 +1,7 @@
-﻿using KellermanSoftware.CompareNetObjects;
-using Momntz.Infrastructure.Data.DTOs;
-using Momntz.Infrastructure.Data.Queries;
+﻿using System;
+using KellermanSoftware.CompareNetObjects;
+using Momntz.Infrastructure.Data;
 using NHibernate;
-using NHibernate.Cfg;
 using NUnit.Framework;
 using Ploeh.AutoFixture;
 
@@ -11,9 +10,7 @@ namespace Momntz.Tests.Framework
     [TestFixture]
     public class DbTestBase
     {
-        protected ISession MomntzSession;
-
-        protected ISession ArtifactSession;
+        protected IMomntzSessions Sessions;
 
         /// <summary>
         /// Gets the session.
@@ -21,49 +18,14 @@ namespace Momntz.Tests.Framework
         [SetUp]
         public void GetSession()
         {
-            //var configuration = new Configuration();
-            //configuration = configuration.Configure();
-            //configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
+            Sessions = new Databases(new DatabaseFactories());
+            IntegrateWithNHProf();
 
-            //MomntzSession = configuration.BuildSessionFactory().OpenSession();
-            //HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
-
-            MomntzSession = GetMomntzSession();
-            ArtifactSession = GetArtifactSession();
         }
 
-        /// <summary>
-        /// Gets the momntz session.
-        /// </summary>
-        /// <returns></returns>
-        private ISession GetMomntzSession()
+        private void IntegrateWithNHProf()
         {
-            var configuration = new Configuration();
-            configuration = configuration.Configure();
-            configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
-
-            return configuration.SetProperty("connection.provider", "NHibernate.Connection.DriverConnectionProvider")
-            .SetProperty("connection.driver_class", "NHibernate.Driver.SqlClientDriver")
-            .SetProperty("connection.connection_string", @"Server=Apollo;initial catalog=Dev.Momntz;Integrated Security=True")
-            .SetProperty("dialect", "NHibernate.Dialect.MsSql2008Dialect")
-            .BuildSessionFactory().OpenSession();
-        }
-
-                /// <summary>
-        /// Gets the momntz session.
-        /// </summary>
-        /// <returns></returns>
-        private ISession GetArtifactSession()
-        {
-            var configuration = new Configuration();
-            configuration = configuration.Configure();
-            configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
-
-            return configuration.SetProperty("connection.provider", "NHibernate.Connection.DriverConnectionProvider")
-            .SetProperty("connection.driver_class", "NHibernate.Driver.SqlClientDriver")
-            .SetProperty("connection.connection_string", @"Server=Apollo;initial catalog=Dev.Artifact;Integrated Security=True")
-            .SetProperty("dialect", "NHibernate.Dialect.MsSql2008Dialect")
-            .BuildSessionFactory().OpenSession();
+            HibernatingRhinos.Profiler.Appender.NHibernate.NHibernateProfiler.Initialize();
         }
 
         /// <summary>
@@ -71,7 +33,7 @@ namespace Momntz.Tests.Framework
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="session">The session.</param>
-        protected void PersistAndRetrieve<T>(ISession session) where T: class, IPrimaryKey<int>, new()
+        protected void PersistAndRetrieve<T>(ISession session)where T : class, IPrimaryKey<int>
         {
             //Arrange
             Fixture fixture = new Fixture();
@@ -95,11 +57,11 @@ namespace Momntz.Tests.Framework
         [TearDown]
         public void CleanUp()
         {
-            MomntzSession.Close();
-            MomntzSession.Dispose();
+            Sessions.Artifact.Close();
+            Sessions.Artifact.Dispose();
 
-            ArtifactSession.Close();
-            ArtifactSession.Dispose();
+            Sessions.Momntz.Close();
+            Sessions.Momntz.Dispose();
         }
     }
 }

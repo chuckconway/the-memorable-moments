@@ -49,6 +49,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="NServiceBus, Version=2.6.0.1504, Culture=neutral, PublicKeyToken=9fc386479f8a226c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParty\nServiceBus\NServiceBus.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\..\ThirdParty\nUnit\nunit.framework.dll</HintPath>
     </Reference>
@@ -74,16 +78,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\DbTestBase.cs" />
-    <Compile Include="Integration\Controllers\Home\IndexGet.cs" />
-    <Compile Include="Integration\Data\EmailTests.cs" />
-    <Compile Include="Integration\Data\MediaTests.cs" />
-    <Compile Include="Integration\Data\UserTests.cs" />
+    <Compile Include="Data\Integration\EmailTests.cs" />
+    <Compile Include="Data\Integration\MediaTests.cs" />
+    <Compile Include="Data\Integration\TemplateTests.cs" />
+    <Compile Include="Data\Integration\UserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subscribe\Integration\EmailMessageHandlerTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Unit\" />
+    <Folder Include="Data\Unit\" />
+    <Folder Include="Subscribe\Unit\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Momntz.Subscribe\Momntz.Subscribe.csproj">
+      <Project>{02E508D0-9193-48B4-AE36-4F8C4036801A}</Project>
+      <Name>Momntz.Subscribe</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Momntz.UI\Momntz.UI.csproj">
       <Project>{35D70DE1-7D5B-4017-9723-3D086EAAF1FD}</Project>
       <Name>Momntz.UI</Name>

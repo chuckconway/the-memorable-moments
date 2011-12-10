@@ -1,4 +1,5 @@
 ﻿using Momntz.Infrastructure;
+using Momntz.Infrastructure.Data;
 using Momntz.Infrastructure.Data.Command;
 using Momntz.Infrastructure.Data.Queries;
 using NHibernate;
@@ -16,9 +17,9 @@ namespace Momntz.UI.Web.Injection
         /// </summary>
         public ApplicationRegistry()
         {
-            For<ISessionFactory>()
+            For<IMomntzSessionFactories>()
                 .Singleton()
-                .Use(CreateSessionFactory());
+                .Use<DatabaseFactories>();
 
             For<ISession>()
            .HttpContextScoped()
@@ -27,6 +28,7 @@ namespace Momntz.UI.Web.Injection
             For<IInjection>().Use<StructureMapIoc>();
             For<IProjections>().Use<Projections>();
             For<ICommandProcessor>().Use<CommandProcessor>();
+            For<IMomntzSessions>().HttpContextScoped().Use<Databases>();
 
             For<IDocumentDatabase>().Use<Infrastructure.Data.Command.Raven>();
             For<IDocumentStore>().Use(GetRavenDb());
@@ -39,17 +41,5 @@ namespace Momntz.UI.Web.Injection
             return documentStore.Initialize();
         }
 
-        /// <summary>
-        /// Creates the session factory.
-        /// </summary>
-        /// <returns></returns>
-        private static ISessionFactory CreateSessionFactory()
-        {
-            var configuration = new Configuration();
-            configuration = configuration.Configure();
-            //configuration = configuration.AddAssembly(typeof(IQuery<>).Assembly);
-
-            return  configuration.BuildSessionFactory();
-        }
     }
 }

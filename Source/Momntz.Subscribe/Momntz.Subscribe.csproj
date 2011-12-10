@@ -38,6 +38,10 @@
     <Reference Include="log4net">
       <HintPath>..\..\ThirdParty\nServiceBus\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate, Version=3.2.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="NServiceBus">
       <HintPath>..\..\ThirdParty\nServiceBus\NServiceBus.dll</HintPath>
     </Reference>

@@ -109,12 +109,6 @@
     <Compile Include="TheUploader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheMemorableMoments\TheMemorableMoments.csproj">
-      <Project>{12BB4292-D205-45F7-98AA-A24FD11705F3}</Project>
-      <Name>TheMemorableMoments</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
