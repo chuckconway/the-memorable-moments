@@ -5,8 +5,19 @@ namespace Momntz.UI.Web.ActionResults
 {
     public class FormActionResult<T> : ActionResult
     {
+        /// <summary>
+        /// Gets the failure.
+        /// </summary>
         public ViewResult Failure { get; private set; }
+
+        /// <summary>
+        /// Gets the success.
+        /// </summary>
         public ActionResult Success { get; private set; }
+
+        /// <summary>
+        /// Gets the form.
+        /// </summary>
         public T Form { get; private set; }
 
         /// <summary>
@@ -34,13 +45,11 @@ namespace Momntz.UI.Web.ActionResults
             }
             else
             {
-                
                 var handler = DependencyResolver.Current.GetService<IFormHandler<T>>();
                 handler.Handle(Form);
 
                 Success.ExecuteResult(context);
             }
-
         }
     }
 }

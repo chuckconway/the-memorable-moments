@@ -1,6 +1,8 @@
 ﻿using Momntz.Commands;
+using Momntz.Domain.Model;
+using Momntz.Exceptions;
 using Momntz.Infrastructure.Data.Command;
-using Momntz.Infrastructure.Data.DTOs;
+
 
 namespace Momntz.CommandHandlers
 {
@@ -23,7 +25,36 @@ namespace Momntz.CommandHandlers
         /// <param name="command">The command.</param>
         public void Execute(CreateUserCommand command)
         {
-            User user = new User
+            var user = PopulateUser(command);
+            var foundUser = CheckForDuplicateUsername(user);
+
+            if(foundUser != null)
+            {
+                throw new DuplicateUsernameException(string.Format("Username '{0}' already exists.", user.Username));
+            }
+
+            _database.Add(user);
+        }
+
+        /// <summary>
+        /// Checks for duplicate username.
+        /// </summary>
+        /// <param name="user">The user.</param>
+        /// <returns></returns>
+        private User CheckForDuplicateUsername(User user)
+        {
+            var foundUser = _database.SingleOrDefault<User>((u) => u.Username == user.Username);
+            return foundUser;
+        }
+
+        /// <summary>
+        /// Populates the user.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <returns></returns>
+        private static User PopulateUser(CreateUserCommand command)
+        {
+            return new User
                             {
                                 AccountStatus = UserAccountStatus.Active,
                                 Email = command.Email,
@@ -32,8 +63,6 @@ namespace Momntz.CommandHandlers
                                 Password = command.Password,
                                 Username = command.Username
                             };
-
-            _database.Add(user);
         }
     }
 }

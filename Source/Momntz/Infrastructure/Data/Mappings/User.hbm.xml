@@ -1,22 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping assembly="Momntz"  namespace="Momntz.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="User" table="`User`"  lazy="true">
-    <id name="Id" column="UserId"  type="int" >
+  <class name="User" table="[User]"  lazy="true">
+    <id name="Id" column="Id"  type="int" >
       <generator class="identity"/>
     </id>
-    <property name="FirstName" length="100" not-null="true" />    
-    <property name="LastName" length="100" not-null="true" />
-    <property name="Password" length="250" not-null="true" />
-    <property name="Email" length="250" not-null="true" />
-    <property name="DisplayName" length="100" not-null="false" />
-    <property name="Username" length="50" not-null="true" />
-    <property name="Deleted"  not-null="true" />
-    <property name="AccountStatus" length="50" not-null="false"/>
-    <property name="LastLogin"  not-null="false" type="datetime2"/>
-    <property name="CurrentSession"  not-null="false" />
-    <property name="EnableReceivingOfEmails"  not-null="true" />
-    <property name="WebViewMaxWidth"  not-null="true" />
-    <property name="WebViewMaxHeight"  not-null="true" />
-    <property name="MaxInvitations"  not-null="true" />
+    <property name="FirstName" not-null="true"  />
+    <property name="LastName" not-null="true"  />
+    <property name="Username" not-null="true"   />
+    <property name="Email" not-null="true" />
+    <property name="Password"  not-null="true" />
+    <property name="CreateDate"  not-null="true" />
   </class>
 </hibernate-mapping>

@@ -58,14 +58,17 @@
     <Compile Include="Commands\CreateUserCommand.cs" />
     <Compile Include="Commands\HomeIndexCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Domain\Model\Facet.cs" />
+    <Compile Include="Domain\Model\Item.cs" />
+    <Compile Include="Domain\Model\Momento.cs" />
+    <Compile Include="Domain\Model\Tag.cs" />
+    <Compile Include="Domain\Model\User.cs" />
+    <Compile Include="Exceptions\DuplicateUsernameException.cs" />
+    <Compile Include="Id.cs" />
     <Compile Include="Infrastructure\CommandProcessor.cs" />
     <Compile Include="Infrastructure\Data\Command\IDocumentDatabase.cs" />
     <Compile Include="Infrastructure\Data\Command\Raven.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Facet.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Item.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Media.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Momento.cs" />
-    <Compile Include="Infrastructure\Data\DTOs\Tag.cs" />
+    <Compile Include="Infrastructure\Data\DTOs\Email.cs" />
     <Compile Include="Infrastructure\Data\DTOs\User.cs" />
     <Compile Include="Infrastructure\Data\Queries\Home\HomeIndexQuery.cs" />
     <Compile Include="Infrastructure\Data\Queries\IQuery.cs" />
@@ -78,20 +81,10 @@
     <Compile Include="PubSub\Messages\ItemMessage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Item.hbm.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Infrastructure\Data\Mappings\Email.hbm.xml" />
     <EmbeddedResource Include="Infrastructure\Data\Mappings\User.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Momento.hbm.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Facet.hbm.xml" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <EmbeddedResource Include="Infrastructure\Data\Mappings\Tag.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

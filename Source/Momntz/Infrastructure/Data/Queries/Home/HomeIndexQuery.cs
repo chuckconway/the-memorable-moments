@@ -1,4 +1,5 @@
-﻿using Momntz.Infrastructure.Data.DTOs;
+﻿using Momntz.Domain.Model;
+using Momntz.Infrastructure.Data.DTOs;
 using Momntz.Infrastructure.Projections;
 using NHibernate;
 

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Momntz.Infrastructure.Data.DTOs;
+using Momntz.Domain.Model;
 
 namespace Momntz.Infrastructure.Projections
 {

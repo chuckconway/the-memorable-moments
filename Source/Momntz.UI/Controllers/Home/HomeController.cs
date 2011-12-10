@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using Momntz.Commands;
 using Momntz.Infrastructure;
-using Momntz.Infrastructure.Projections;
 using Momntz.UI.Web;
 
 namespace Momntz.UI.Controllers.Home
@@ -22,17 +21,6 @@ namespace Momntz.UI.Controllers.Home
             _projections = projections;
             _commandProcessor = commandProcessor;
         }
-
-        /// <summary>
-        /// Indexes this instance.
-        /// </summary>
-        /// <returns></returns>
-        
-        //public ActionResult Index()
-        //{
-        //    var projection = _projections.Get<HomeIndexProjection>();
-        //    return View(projection);
-        //}
 
         /// <summary>
         /// Indexes the specified id.

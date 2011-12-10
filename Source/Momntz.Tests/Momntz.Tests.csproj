@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Framework\DbTestBase.cs" />
     <Compile Include="Integration\Controllers\Home\IndexGet.cs" />
+    <Compile Include="Integration\Data\EmailTests.cs" />
     <Compile Include="Integration\Data\MediaTests.cs" />
     <Compile Include="Integration\Data\UserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

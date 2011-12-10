@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK, Version=1.3.18.0, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParty\Amazon\AWSSDK.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\..\ThirdParty\nServiceBus\log4net.dll</HintPath>
     </Reference>
@@ -73,6 +77,10 @@
       <Project>{66EBD27E-70EE-49DF-B062-B5E3C02A8736}</Project>
       <Name>Momntz</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MessageHandlers\Denormization\" />
+    <Folder Include="Workflows\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

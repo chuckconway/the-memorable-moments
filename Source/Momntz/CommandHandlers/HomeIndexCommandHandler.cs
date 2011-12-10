@@ -1,6 +1,6 @@
 ﻿using Momntz.Commands;
+using Momntz.Domain.Model;
 using Momntz.Infrastructure.Data.Command;
-using Momntz.Infrastructure.Data.DTOs;
 
 namespace Momntz.CommandHandlers
 {

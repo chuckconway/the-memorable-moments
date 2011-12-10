@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping assembly="Momntz"  namespace="Momntz.Infrastructure.Data.DTOs" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Email" table="Email"  lazy="true">
+    <id name="Id" column="Id"  type="int" >
+      <generator class="identity"/>
+    </id>
+    <property name="To" column="[To]" length="250" not-null="true" />
+    <property name="From" column="[From]" length="250" not-null="false" />
+    <property name="Subject" length="500" not-null="true" />
+    <property name="Body" not-null="true" />
+    <property name="UserId"  not-null="true" />
+  </class>
+</hibernate-mapping>

@@ -1,3 +1,6 @@
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
+
 namespace Momntz.UI.Models.Signup
 {
     public class SignupView
@@ -8,6 +11,8 @@ namespace Momntz.UI.Models.Signup
         /// <value>
         /// The first name.
         /// </value>
+        [StringLength(50)]
+        [Required]
         public string FirstName { get; set; }
 
         /// <summary>
@@ -16,6 +21,8 @@ namespace Momntz.UI.Models.Signup
         /// <value>
         /// The last name.
         /// </value>
+        [StringLength(50)]
+        [Required]
         public string LastName { get; set; }
 
         /// <summary>
@@ -24,6 +31,8 @@ namespace Momntz.UI.Models.Signup
         /// <value>
         /// The username.
         /// </value>
+        [StringLength(50)]
+        [Required]
         public string Username { get; set; }
 
         /// <summary>
@@ -32,6 +41,8 @@ namespace Momntz.UI.Models.Signup
         /// <value>
         /// The email.
         /// </value>
+        [StringLength(250)]
+        [Required]
         public string Email { get; set; }
 
         /// <summary>
@@ -40,6 +51,9 @@ namespace Momntz.UI.Models.Signup
         /// <value>
         /// The password.
         /// </value>
+        [StringLength(250)]
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         /// <summary>
@@ -48,6 +62,10 @@ namespace Momntz.UI.Models.Signup
         /// <value>
         /// The confirm.
         /// </value>
+        [StringLength(250)]
+        [Required]
+        [DataType(DataType.Password)]
+        [Compare("Password")]
         public string Confirm { get; set; }
     }
 }

@@ -22,7 +22,13 @@ namespace Momntz.Subscribe
             Configure.With()
             .StructureMapBuilder(ObjectFactory.Container)
             .XmlSerializer()
-            .UnicastBus(); //managed by the class Subscriber2Endpoint
+            .UnicastBus()
+            .LoadMessageHandlers()
+            .ImpersonateSender(false)
+            .Sagas()
+            .NHibernateSagaPersisterWithSQLiteAndAutomaticSchemaGeneration()
+            .CreateBus()
+            .Start();  
         }
 
         /// <summary>
