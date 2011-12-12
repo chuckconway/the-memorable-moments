@@ -59,6 +59,10 @@
     <Reference Include="Ploeh.AutoFixture">
       <HintPath>..\..\ThirdParty\AutoFixture\Ploeh.AutoFixture.dll</HintPath>
     </Reference>
+    <Reference Include="Raven.Client.Lightweight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ThirdParty\Raven\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap, Version=2.6.1.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\StructureMap\StructureMap.dll</HintPath>
@@ -77,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Integration\MomentoTests.cs" />
     <Compile Include="Framework\DbTestBase.cs" />
     <Compile Include="Data\Integration\EmailTests.cs" />
     <Compile Include="Data\Integration\MediaTests.cs" />

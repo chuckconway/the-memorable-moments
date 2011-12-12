@@ -28,8 +28,8 @@ namespace Momntz.Subscribe
                     .Singleton()
                     .Use<DatabaseFactories>();
 
-                x.For<ISession>()
-               .Use(context => context.GetInstance<ISessionFactory>().OpenSession());
+                x.For<IMomntzSessions>()
+               .Use<Databases>();
 
                 //x.AddRegistry(new ApplicationRegistry());
                 //x.For<IStartableBus>().Use<Startable>();

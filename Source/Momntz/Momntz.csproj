@@ -34,6 +34,9 @@
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\ThirdParty\nHibernate\Iesi.Collections.dll</HintPath>
     </Reference>
+    <Reference Include="Joel.Net.Akismet">
+      <HintPath>..\..\ThirdParty\Akismet\Joel.Net.Akismet.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
     </Reference>
@@ -42,6 +45,9 @@
     </Reference>
     <Reference Include="Raven.Client.Lightweight">
       <HintPath>..\..\ThirdParty\Raven\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\ThirdParty\StructureMap\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,9 +61,15 @@
     <Compile Include="CommandHandlers\CreateUserCommandHandler.cs" />
     <Compile Include="CommandHandlers\HomeIndexCommandHandler.cs" />
     <Compile Include="CommandHandlers\ICommandHandler.cs" />
-    <Compile Include="Commands\CreateUserCommand.cs" />
+    <Compile Include="CommandHandlers\Momentos\CreateCommentCommandHandler.cs" />
+    <Compile Include="CommandHandlers\Momentos\MarkCommentAsSpamCommandHandler.cs" />
+    <Compile Include="Commands\Momentos\CreateCommentCommand.cs" />
+    <Compile Include="Commands\Momentos\MarkCommentAsSpamCommand.cs" />
+    <Compile Include="Commands\User\CreateUserCommand.cs" />
     <Compile Include="Commands\HomeIndexCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Domain\Model\Comment.cs" />
+    <Compile Include="Domain\Model\IdentityCollection.cs" />
     <Compile Include="Domain\Model\Facet.cs" />
     <Compile Include="Domain\Model\Item.cs" />
     <Compile Include="Domain\Model\Momento.cs" />
@@ -65,10 +77,13 @@
     <Compile Include="Domain\Model\User.cs" />
     <Compile Include="Exceptions\DuplicateUsernameException.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Template.cs" />
+    <Compile Include="Infrastructure\Services\Spam\CommentCheckForSpam.cs" />
+    <Compile Include="Infrastructure\Services\Spam\CommentSpamService.cs" />
+    <Compile Include="Infrastructure\Services\Spam\ICommentSpamService.cs" />
     <Compile Include="IPrimaryKey.cs" />
     <Compile Include="Infrastructure\CommandProcessor.cs" />
     <Compile Include="Infrastructure\Data\Command\IDocumentDatabase.cs" />
-    <Compile Include="Infrastructure\Data\Command\Raven.cs" />
+    <Compile Include="Infrastructure\Data\Command\RavenDb.cs" />
     <Compile Include="Infrastructure\Data\DatabaseFactories.cs" />
     <Compile Include="Infrastructure\Data\Databases.cs" />
     <Compile Include="Infrastructure\Data\DTOs\Email.cs" />
@@ -80,7 +95,9 @@
     <Compile Include="Infrastructure\ICommandProcessor.cs" />
     <Compile Include="Infrastructure\IInjection.cs" />
     <Compile Include="Infrastructure\Projections\HomeIndexProjection.cs" />
+    <Compile Include="MomntzRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PubSub\Messages\CommentMessage.cs" />
     <Compile Include="PubSub\Messages\EmailMessage.cs" />
     <Compile Include="PubSub\Messages\IEvent.cs" />
     <Compile Include="PubSub\Messages\ItemMessage.cs" />
@@ -93,6 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Infrastructure\Data\Mappings\Template.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\Services\Email\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

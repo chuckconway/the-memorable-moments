@@ -1,16 +1,18 @@
-using System.Collections.Generic;
+using System;
+using System.Linq;
 
 namespace Momntz.Domain.Model
 {
     public class Momento
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Momento"/> class.
         /// </summary>
         public Momento()
         {
-            Items = new List<Item>();
+            Items = new IdentityCollection<Item>();
+            Comments = new IdentityCollection<Comment>();
+            Tags = new IdentityCollection<Tag>();
         }
 
         /// <summary>
@@ -19,7 +21,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The id.
         /// </value>
-        public virtual int Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
@@ -27,7 +29,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The name.
         /// </value>
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the description.
@@ -35,7 +37,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The description.
         /// </value>
-        public virtual string Description { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Gets or sets the year.
@@ -43,7 +45,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The year.
         /// </value>
-        public virtual int? Year { get; set; }
+        public int? Year { get; set; }
 
         /// <summary>
         /// Gets or sets the month.
@@ -51,7 +53,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The month.
         /// </value>
-        public virtual int? Month { get; set; }
+        public int? Month { get; set; }
 
         /// <summary>
         /// Gets or sets the day.
@@ -59,7 +61,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The day.
         /// </value>
-        public virtual int? Day { get; set; }
+        public int? Day { get; set; }
 
         /// <summary>
         /// Gets or sets the tags.
@@ -67,7 +69,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The tags.
         /// </value>
-        public virtual ICollection<Tag> Tags { get; set; } 
+        public IdentityCollection<Tag> Tags { get; set; } 
 
         /// <summary>
         /// Gets or sets the items.
@@ -75,7 +77,15 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The items.
         /// </value>
-        public virtual ICollection<Item> Items { get; set; }
+        public IdentityCollection<Item> Items { get; set; }
+
+        /// <summary>
+        /// Gets or sets the comments.
+        /// </summary>
+        /// <value>
+        /// The comments.
+        /// </value>
+        public IdentityCollection<Comment> Comments { get; set; } 
 
         /// <summary>
         /// Gets or sets the visibility.
@@ -83,7 +93,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The visibility.
         /// </value>
-        public virtual Visibility Visibility { get; set; }
+        public Visibility Visibility { get; set; }
 
         /// <summary>
         /// Gets or sets the user.
@@ -91,7 +101,66 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The user.
         /// </value>
-        public virtual User User { get; set; }
+        public User User { get; set; }
+
+        /// <summary>
+        /// Marks the comment as spam.
+        /// </summary>
+        /// <param name="commentId">The comment id.</param>
+        public void MarkCommentAsSpam(int commentId)
+        {
+            const CommentStatus status = CommentStatus.Spam;
+            SetCommentStatus(commentId, status);
+        }
+
+        /// <summary>
+        /// Marks the comment as spam.
+        /// </summary>
+        /// <param name="commentId">The comment id.</param>
+        public void MarkCommentAsApproved(int commentId)
+        {
+            const CommentStatus status = CommentStatus.Spam;
+            SetCommentStatus(commentId, status);
+        }
+
+        /// <summary>
+        /// Sets the comment status.
+        /// </summary>
+        /// <param name="commentId">The comment id.</param>
+        /// <param name="status">The status.</param>
+        private void SetCommentStatus(int commentId, CommentStatus status)
+        {
+            var comment = Comments.Where(c => c.Id == commentId).SingleOrDefault();
+
+            if (comment != null)
+            {
+                comment.Status = status;
+            }
+        }
+
+        /// <summary>
+        /// Adds the comment.
+        /// </summary>
+        /// <param name="comment">The comment.</param>
+        public void AddComment(Comment comment)
+        {
+            comment.Timestamp = DateTime.UtcNow;
+            Comments.Add(comment);
+        }
+
+        /// <summary>
+        /// Deletes the comment.
+        /// </summary>
+        /// <param name="commentId">The comment id.</param>
+        public void DeleteComment(int commentId)
+        {
+            Comment comment = Comments.Where(c => c.Id == commentId).SingleOrDefault();
+
+            if(comment != null)
+            {
+                Comments.Remove(comment);
+            }
+        }
     }
 
     public enum Visibility

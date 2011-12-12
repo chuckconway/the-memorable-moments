@@ -12,7 +12,7 @@ namespace Momntz.Tests.Subscribe.Integration
     public class EmailMessageHandlerTest : DbTestBase
     {
         [Test]
-        public void EmailMessageHandler_SendEmai_EmailSuccessfullySent()
+        public void EmailMessageHandler_SendEmail_EmailSuccessfullySent()
         {
             //Dependant on a template named 'welcome' in the Dev.Artifact.Template table.
 

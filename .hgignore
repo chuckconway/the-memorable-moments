@@ -5,6 +5,7 @@ syntax: glob
 *.FileListAbsolute.txt
 *\bin\*
 *\Bin\*
+*\debug\*
 *\obj\*
 *.ncb
 *.nlb

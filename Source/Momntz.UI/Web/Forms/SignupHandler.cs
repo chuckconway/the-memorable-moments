@@ -1,4 +1,5 @@
 ﻿using Momntz.Commands;
+using Momntz.Commands.User;
 using Momntz.Exceptions;
 using Momntz.Infrastructure;
 using Momntz.UI.Models.Signup;

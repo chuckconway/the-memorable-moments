@@ -5,16 +5,16 @@ using Raven.Client;
 
 namespace Momntz.Infrastructure.Data.Command
 {
-    public class Raven : IDocumentDatabase
+    public class RavenDb : IDocumentDatabase
     {
         private readonly IDocumentStore _store;
         private readonly IDocumentSession _session;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Raven"/> class.
+        /// Initializes a new instance of the <see cref="RavenDb"/> class.
         /// </summary>
         /// <param name="store">The store.</param>
-        public Raven(IDocumentStore store)
+        public RavenDb(IDocumentStore store)
         {
             _store = store;
             _session = _store.OpenSession();

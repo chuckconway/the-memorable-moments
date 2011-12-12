@@ -67,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="MessageHandlers\CommentMessageHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MessageHandlers\EmailMessageHandler.cs" />
     <Compile Include="MessageHandlers\ItemMessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

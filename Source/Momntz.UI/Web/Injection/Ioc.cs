@@ -24,6 +24,7 @@ namespace Momntz.UI.Web.Injection
             ObjectFactory.Initialize(x =>
                                          {
                                              x.AddRegistry(new ApplicationRegistry());
+                                             x.AddRegistry(new MomntzRegistry());
                                              //x.For<IStartableBus>().Use<Startable>();
                                              x.Scan(scan =>
                                                         {

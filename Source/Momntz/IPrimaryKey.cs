@@ -1,7 +1,7 @@
 ﻿namespace Momntz
 {
-    public interface IPrimaryKey<out T>
+    public interface IPrimaryKey<T>
     {
-        T Id { get; }
+        T Id { get; set; }
     }
 }

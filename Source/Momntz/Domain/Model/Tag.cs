@@ -1,6 +1,6 @@
 ﻿namespace Momntz.Domain.Model
 {
-    public class Tag
+    public class Tag : IPrimaryKey<int>
     {
         /// <summary>
         /// Gets or sets the id.
@@ -8,7 +8,7 @@
         /// <value>
         /// The id.
         /// </value>
-        public virtual int Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
@@ -16,7 +16,7 @@
         /// <value>
         /// The name.
         /// </value>
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the description.
@@ -24,7 +24,7 @@
         /// <value>
         /// The description.
         /// </value>
-        public virtual string Description { get; set; }
+        public string Description { get; set; }
 
         /// <summary>
         /// Gets or sets the type.
@@ -32,6 +32,6 @@
         /// <value>
         /// The type.
         /// </value>
-        public virtual string Type { get; set; }
+        public string Type { get; set; }
     }
 }

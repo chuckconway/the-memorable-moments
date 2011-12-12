@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Momntz.Commands
+﻿namespace Momntz.Commands.User
 {
     public class CreateUserCommand : ICommand<int>
     {

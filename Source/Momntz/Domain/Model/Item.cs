@@ -2,7 +2,7 @@
 
 namespace Momntz.Domain.Model
 {
-    public class Item
+    public class Item : IPrimaryKey<int>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Item"/> class.
@@ -18,7 +18,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The id.
         /// </value>
-        public virtual int Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// Gets or sets the name.
@@ -26,7 +26,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The name.
         /// </value>
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the extension.
@@ -34,7 +34,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The extension.
         /// </value>
-        public virtual string Extension { get; set; }
+        public string Extension { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the original.
@@ -42,7 +42,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The name of the original.
         /// </value>
-        public virtual string OriginalName { get; set; }
+        public string OriginalName { get; set; }
 
         /// <summary>
         /// Gets or sets the attributes.
@@ -50,7 +50,7 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The attributes.
         /// </value>
-        public virtual ICollection<Facet> Facets { get; set; }
+        public ICollection<Facet> Facets { get; set; }
 
         /// <summary>
         /// Gets or sets the media.
@@ -58,6 +58,6 @@ namespace Momntz.Domain.Model
         /// <value>
         /// The media.
         /// </value>
-        public virtual Momento Momento { get; set; }
+        public Momento Momento { get; set; }
     }
 }
