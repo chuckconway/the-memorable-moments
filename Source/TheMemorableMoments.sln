@@ -13,6 +13,10 @@ Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Momntz.Database.Momntz", "M
 EndProject
 Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "Momntz.Database.Artifact", "Momntz.Database.Artifact\Momntz.Database.Artifact.dbproj", "{00BFB3BB-8B6D-4886-B090-B14D1A1D7364}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momntz.My", "Momntz.My\Momntz.My.csproj", "{FDB60776-A43D-49F0-AD4A-87F7295964F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Momntz.UI.Content", "Momntz.UI.Content\Momntz.UI.Content.csproj", "{0C705751-342D-4497-9BDB-F0BCAB4101F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +81,22 @@ Global
 		{00BFB3BB-8B6D-4886-B090-B14D1A1D7364}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00BFB3BB-8B6D-4886-B090-B14D1A1D7364}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00BFB3BB-8B6D-4886-B090-B14D1A1D7364}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.QA|Any CPU.Build.0 = Release|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB60776-A43D-49F0-AD4A-87F7295964F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.QA|Any CPU.ActiveCfg = Release|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.QA|Any CPU.Build.0 = Release|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C705751-342D-4497-9BDB-F0BCAB4101F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
