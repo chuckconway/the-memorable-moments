@@ -25,14 +25,11 @@ namespace Momntz.UI.Web.Injection
                                          {
                                              x.AddRegistry(new ApplicationRegistry());
                                              x.AddRegistry(new MomntzRegistry());
-                                             //x.For<IStartableBus>().Use<Startable>();
+
                                              x.Scan(scan =>
                                                         {
-                                                            //scan.AssemblyContainingType(typeof(IStartableBus));
-                                                            //scan.AssemblyContainingType(typeof(ITransport));
-                                                            //scan.AssemblyContainingType(typeof(MessageSerializer));
-                                                            scan.WithDefaultConventions();
-                                                            scan.TheCallingAssembly();
+                                                            //scan.WithDefaultConventions();
+                                                            //scan.TheCallingAssembly();
                                                             scan.AddAllTypesOf<IController>();
                                                             scan.AssemblyContainingType(typeof (IQuery<>));
                                                             scan.AddAllTypesOf(typeof (IQuery<>));

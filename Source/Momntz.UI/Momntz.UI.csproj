@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -60,10 +61,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\nHibernate\NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate.ByteCode.LinFu, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ThirdParty\nHibernate\NHibernate.ByteCode.LinFu.dll</HintPath>
-    </Reference>
     <Reference Include="NLog">
       <HintPath>..\..\..\..\Raven\Client\NLog.dll</HintPath>
     </Reference>
@@ -79,9 +76,9 @@
     <Reference Include="Raven.Client.Lightweight">
       <HintPath>..\..\..\..\Raven\Client\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
-    <Reference Include="StructureMap, Version=2.6.1.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+    <Reference Include="StructureMap, Version=2.6.2.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ThirdParty\nServiceBus\containers\structuremap262\StructureMap.dll</HintPath>
+      <HintPath>..\..\ThirdParty\StructureMap\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -128,10 +125,6 @@
     <Content Include="Content\CSS\Signup\index.css" />
     <Content Include="Content\CSS\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Frameworks\jQuery\jquery.1.7.1.js" />
-    <Content Include="Scripts\Frameworks\jQuery\Plugins\jquery.tmpl.js" />
-    <Content Include="Scripts\Frameworks\KnockOutJs\knockout-1.3.0beta.js" />
-    <Content Include="Scripts\Frameworks\Modernizr\modernizr-1.7.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -183,17 +176,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>54313</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

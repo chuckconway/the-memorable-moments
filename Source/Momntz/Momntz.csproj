@@ -46,7 +46,8 @@
     <Reference Include="Raven.Client.Lightweight">
       <HintPath>..\..\ThirdParty\Raven\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
-    <Reference Include="StructureMap">
+    <Reference Include="StructureMap, Version=2.6.1.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ThirdParty\StructureMap\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />

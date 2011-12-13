@@ -12,7 +12,7 @@ namespace Momntz.PubSub.Messages
         /// <param name="from">From.</param>
         /// <param name="template">The template.</param>
         /// <param name="tokens">The tokens.</param>
-        public EmailMessage(int userId, string from, string template, IDictionary<string, string> tokens)
+        public EmailMessage(int userId, string from, string template, Dictionary<string, string> tokens)
         {
             UserId = userId;
             From = from;
@@ -44,7 +44,7 @@ namespace Momntz.PubSub.Messages
         /// <value>
         /// The tokens.
         /// </value>
-        public IDictionary<string, string> Tokens { get; set; } 
+        public Dictionary<string, string> Tokens { get; set; } 
 
         /// <summary>
         /// Gets the created timestamp.

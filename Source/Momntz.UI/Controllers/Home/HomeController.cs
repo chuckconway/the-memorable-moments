@@ -30,8 +30,8 @@ namespace Momntz.UI.Controllers.Home
         [HttpGet]
         public ActionResult Index()
         {
-            HomeIndexCommand command = new HomeIndexCommand(Guid.NewGuid());
-            _commandProcessor.Process(command);
+            //HomeIndexCommand command = new HomeIndexCommand(Guid.NewGuid());
+            //_commandProcessor.Process(command);
             return View();
         }
 
